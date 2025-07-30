@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario - Encargados</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+        }
+        
+        .page {
+            min-height: 100vh;
+            padding: 20px;
+            page-break-after: always;
+        }
+        
+        .page:last-child {
+            page-break-after: avoid;
+        }
+        
+        /* Portada */
+        .portada {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .titulo-principal {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitulo {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .info-manual {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .info-manual h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .info-manual p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        /* Contenido general */
+        h1 {
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #764ba2;
+            font-size: 22px;
+            margin: 25px 0 15px 0;
+        }
+        
+        h3 {
+            color: #555;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+        }
+        
+        p, li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .alerta {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #fdcb6e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .alerta-importante {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .paso {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .codigo {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        
+        .captura {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f9f9f9;
+            text-align: center;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .tabla-funciones {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .tabla-funciones th,
+        .tabla-funciones td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .tabla-funciones th {
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .tabla-funciones tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .indice {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .indice h2 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        
+        .indice ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .indice li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ddd;
+        }
+        
+        .indice a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .indice a:hover {
+            color: #667eea;
+        }
+        
+        @media print {
+            .page {
+                margin: 0;
+                padding: 15mm;
+            }
+            
+            .portada {
+                margin: -15mm;
+                padding: 15mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PORTADA -->
+    <div class="page portada">
+        <div class="logo">NT</div>
+        <h1 class="titulo-principal">Novedades Tango</h1>
+        <p class="subtitulo">Manual de Usuario para Encargados</p>
+        
+        <div class="info-manual">
+            <h3>📋 Información del Manual</h3>
+            <p><strong>Versión:</strong> 1.0</p>
+            <p><strong>Dirigido a:</strong> Usuarios con rol de Encargado</p>
+            <p><strong>Fecha:</strong> Julio 2025</p>
+            <p><strong>Funciones principales:</strong> Consulta de empleados y dashboard</p>
+        </div>
+    </div>
+
+    <!-- ÍNDICE -->
+    <div class="page">
+        <div class="indice">
+            <h2>📑 Índice de Contenidos</h2>
+            <ul>
+                <li><a href="#introduccion">1. Introducción</a></li>
+                <li><a href="#acceso">2. Acceso al Sistema</a></li>
+                <li><a href="#dashboard">3. Panel Principal (Dashboard)</a></li>
+                <li><a href="#empleados">4. Consulta de Empleados</a></li>
+                <li><a href="#novedades">5. Consulta de Novedades</a></li>
+                <li><a href="#navegacion">6. Navegación General</a></li>
+                <li><a href="#solucion">7. Solución de Problemas</a></li>
+                <li><a href="#contacto">8. Contacto y Soporte</a></li>
+            </ul>
+        </div>        
+    </div>
+
+    <!-- INTRODUCCIÓN -->
+    <div class="page">
+        <h1 id="introduccion">1. 🚀 Introducción</h1>
+        
+        <p><strong>Novedades Tango</strong> es una aplicación web diseñada para la gestión integral de empleados y carga novedades laborales.</p>
+
+        <h2>🎯 Objetivo del Manual</h2>
+        <p>Este manual te guiará paso a paso para utilizar eficientemente las funciones basicas de la aplicación, permitiéndote:</p>
+        <ul>
+            <li>Acceder al sistema de forma segura</li>
+            //<li>Consultar información del dashboard</li>
+            <li>Visualizar el listado completo de empleados</li>
+            <li>Navegar de manera intuitiva por la aplicación</li>
+        </ul>
+
+        <h2>👤 Perfil de Usuario: Encargado</h2>
+        <div class="alerta">
+            <strong>📊 Funciones disponibles para Encargados:</strong>
+            <ul style="margin-top: 10px;">
+                <li>✅ Ver dashboard con estadísticas generales</li>
+                <li>✅ Consultar listado de empleados (solo lectura)</li>
+                <li>✅ Ver información detallada de empleados</li>
+                <li>✅ Consultar novedades existentes (solo lectura)</li>
+                <li>❌ No puede crear, editar o eliminar empleados</li>
+                <li>❌ No puede crear, editar o eliminar novedades</li>
+                <li>❌ No tiene acceso a funciones administrativas</li>
+            </ul>
+        </div>
+
+        <h2>🔒 Seguridad y Acceso</h2>
+        <p>El sistema utiliza autenticación por token para garantizar la seguridad. Tu sesión se mantendrá activa mientras uses la aplicación, pero se cerrará automáticamente por seguridad después de un período de inactividad.</p>
+    </div>
+
+    <!-- ACCESO AL SISTEMA -->
+    <div class="page">
+        <h1 id="acceso">2. 🔐 Acceso al Sistema</h1>
+
+        <h2>Paso 1: Pantalla de Login</h2>
+        <div class="paso">
+            <p><strong>1.</strong> Accede a la URL de la aplicación proporcionada por tu administrador</p>
+            <p><strong>2.</strong> Verás una pantalla de inicio de sesión con dos campos:</p>
+            <ul>
+                <li><strong>Usuario:</strong> Tu nombre de usuario asignado</li>
+                <li><strong>Contraseña:</strong> Tu clave de acceso</li>
+            </ul>
+        </div>
+
+        <div class="captura">
+            [Pantalla de Login]<br>
+            📱 Formulario con campos Usuario y Contraseña<br>
+            🔵 Botón "Ingresar"
+        </div>
+
+        <h2>Paso 2: Ingreso de Credenciales</h2>
+        <div class="paso">
+            <p><strong>1.</strong> Ingresa tu <strong>usuario</strong> en el primer campo</p>
+            <p><strong>2.</strong> Ingresa tu <strong>contraseña</strong> en el segundo campo</p>
+            <p><strong>3.</strong> Haz clic en el botón <strong>"Ingresar"</strong></p>
+        </div>
+
+        <div class="alerta-importante">
+            <strong>⚠️ Errores Comunes:</strong>
+            <ul style="margin-top: 10px;">
+                <li><strong>"Usuario o clave incorrectos":</strong> Verifica que hayas ingresado correctamente tus credenciales</li>
+                <li><strong>"No se puede conectar con el servidor":</strong> Contacta al administrador del sistema</li>
+                <li><strong>"Sesión expirada":</strong> Vuelve a iniciar sesión</li>
+            </ul>
+        </div>
+
+        <h2>Paso 3: Acceso Exitoso</h2>
+        <p>Una vez que ingreses correctamente, serás redirigido automáticamente al <strong>Dashboard</strong> principal de la aplicación.</p>
+
+        <div class="alerta">
+            <strong>💡 Tip:</strong> Si ya tienes una sesión activa, la aplicación te redirigirá automáticamente al dashboard sin necesidad de volver a ingresar credenciales.
+        </div>
+    </div>
+
+    <!-- DASHBOARD -->
+  <!--  <div class="page">
+        //<h1 id="dashboard">3. 📊 Panel Principal (Dashboard)</h1>
+
+        //<p>El Dashboard es la pantalla principal que verás al ingresar al sistema. Proporciona una vista general de la información más relevante.</p>
+
+        /*<h2>🎯 Elementos del Dashboard</h2>
+
+        <h3>1. Contador de Empleados</h3>
+        <div class="paso">
+            <p>En la parte superior encontrarás una tarjeta destacada que muestra:</p>
+            <ul>
+                <li><strong>Total de empleados:</strong> Número total de empleados activos en el sistema</li>
+                <li><strong>Visualización:</strong> Número grande en color azul para fácil lectura</li>
+            </ul>
+        </div>
+
+        <div class="captura">
+            [Tarjeta de Empleados]<br>
+            📋 "Total de empleados"<br>
+            🔵 Número grande (ej: 150)
+        </div>
+
+        <h3>2. Navegación Principal</h3>
+        <p>Desde el dashboard puedes acceder a las diferentes secciones:</p>
+        <ul>
+            <li><strong>Dashboard:</strong> Pantalla actual con estadísticas</li>
+            <li><strong>Empleados:</strong> Listado completo de empleados</li>
+            <li><strong>Novedades:</strong> Consulta de novedades registradas</li>
+        </ul>
+
+        <div class="alerta">
+            <strong>📝 Nota:</strong> Como Encargado, solo verás las secciones a las que tienes acceso. Otras opciones como creación/edición de novedades o configuraciones administrativas no estarán disponibles.
+        </div>
+
+        <h2>🔄 Actualización de Datos</h2>
+        <p>Los datos del dashboard se actualizan automáticamente cada vez que accedes. Si necesitas información más reciente, puedes:</p>
+        <ul>
+            <li>Recargar la página del navegador (F5)</li>
+            <li>Navegar a otra sección y volver al dashboard</li>
+        </ul>
+    </div>*/ -->
+
+    <!-- EMPLEADOS -->
+    <div class="page">
+        <h1 id="empleados">4. 👥 Consulta de Empleados</h1>
+
+        <p>La sección de empleados te permite visualizar información detallada de todos los empleados registrados en el sistema.</p>
+
+        <h2>🚀 Acceso a la Sección</h2>
+        <div class="paso">
+            <p><strong>1.</strong> Desde el menú principal, haz clic en <strong>"Empleados"</strong></p>
+            <p><strong>2.</strong> Se cargará automáticamente el listado completo</p>
+        </div>
+
+        <h2>📋 Información Mostrada</h2>
+        <p>La tabla de empleados incluye las siguientes columnas:</p>
+
+        <table class="tabla-funciones">
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Estado</strong></td>
+                    <td>✅ Activo / ❌ Anulado</td>
+                </tr>
+                <tr>
+                    <td><strong>Legajo</strong></td>
+                    <td>Número único de identificación del empleado</td>
+                </tr>
+                <tr>
+                    <td><strong>Nombre</strong></td>
+                    <td>Nombre completo (Apellido, Nombre)</td>
+                </tr>
+                <tr>
+                    <td><strong>CUIT</strong></td>
+                    <td>Número de CUIT del empleado</td>
+                </tr>
+                <tr>
+                    <td><strong>Domicilio</strong></td>
+                    <td>Dirección del empleado</td>
+                </tr>
+                <tr>
+                    <td><strong>Sucursal</strong></td>
+                    <td>Sucursal donde trabaja</td>
+                </tr>
+                <tr>
+                    <td><strong>Empresa</strong></td>
+                    <td>Empresa a la que pertenece</td>
+                </tr>
+                <tr>
+                    <td><strong>Convenio</strong></td>
+                    <td>Tipo de convenio laboral</td>
+                </tr>
+                <tr>
+                    <td><strong>Categoría</strong></td>
+                    <td>Categoría laboral del empleado</td>
+                </tr>
+                <tr>
+                    <td><strong>Tarea</strong></td>
+                    <td>Descripción de la tarea que realiza</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🎨 Interpretación Visual</h2>
+        <div class="alerta">
+            <strong>Códigos de Color:</strong>
+            <ul style="margin-top: 10px;">
+                <li><strong>Fondo blanco:</strong> Empleados activos</li>
+                <li><strong>Fondo rojo claro:</strong> Empleados anulados/inactivos</li>
+                <li><strong>✅ Verde:</strong> Estado activo</li>
+                <li><strong>❌ Rojo:</strong> Estado anulado</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- NOVEDADES -->
+    <div class="page">
+        <h1 id="novedades">5. 📋 Consulta de Novedades</h1>
+
+        <p>La sección de novedades te permite visualizar todas las novedades laborales registradas en el sistema para los empleados.</p>
+
+        <h2>🚀 Acceso a la Sección</h2>
+        <div class="paso">
+            <p><strong>1.</strong> Desde el menú principal, haz clic en <strong>"Novedades"</strong></p>
+            <p><strong>2.</strong> Se cargará automáticamente el listado completo de novedades</p>
+        </div>
+
+        <h2>📊 Información Mostrada</h2>
+        <p>La tabla de novedades incluye las siguientes columnas:</p>
+
+        <table class="tabla-funciones">
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Fecha</strong></td>
+                    <td>Fecha cuando se registró la novedad (DD-MM-YYYY)</td>
+                </tr>
+                <tr>
+                    <td><strong>Legajo</strong></td>
+                    <td>Número de legajo del empleado</td>
+                </tr>
+                <tr>
+                    <td><strong>Empleado</strong></td>
+                    <td>Nombre completo del empleado (Apellido, Nombre)</td>
+                </tr>
+                <tr>
+                    <td><strong>Concepto</strong></td>
+                    <td>Descripción del tipo de novedad</td>
+                </tr>
+                <tr>
+                    <td><strong>Cantidad</strong></td>
+                    <td>Cantidad o valor de la novedad</td>
+                </tr>
+                <tr>
+                    <td><strong>Observación</strong></td>
+                    <td>Comentarios adicionales sobre la novedad</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🔍 Funciones de Consulta</h2>
+        <div class="alerta">
+            <strong>Como Encargado puedes:</strong>
+            <ul style="margin-top: 10px;">
+                <li>✅ Ver todas las novedades registradas</li>
+                <li>✅ Consultar detalles de cada novedad</li>
+                <li>✅ Ver información del empleado asociado</li>
+                <li>✅ Leer observaciones y comentarios</li>
+            </ul>
+        </div>
+
+        <div class="alerta-importante">
+            <strong>Restricciones del rol Encargado:</strong>
+            <ul style="margin-top: 10px;">
+                <li>❌ No puedes crear nuevas novedades</li>
+                <li>❌ No puedes editar novedades existentes</li>
+                <li>❌ No puedes eliminar novedades</li>
+                <li>❌ No verás botones de "Registrar Novedad" o acciones de edición</li>
+            </ul>
+        </div>
+
+        <h2>📅 Interpretación de Fechas</h2>
+        <p>Las fechas se muestran en formato día-mes-año (DD-MM-YYYY) para facilitar su lectura:</p>
+        <div class="codigo">
+Ejemplo: 15-07-2025 = 15 de Julio de 2025
+</div>
+
+        <h2>💡 Consejos de Uso</h2>
+        <ul>
+            <li><strong>Observaciones largas:</strong> Si una observación es muy larga, aparecerá truncada. Pasa el cursor sobre ella para ver el texto completo</li>
+            <li><strong>Orden de datos:</strong> Las novedades se muestran ordenadas por fecha, con las más recientes primero</li>
+            <li><strong>Actualización:</strong> Los datos se actualizan automáticamente al acceder a la sección</li>
+        </ul>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <div class="page">
+        <h1 id="navegacion">6. 🧭 Navegación General</h1>
+
+        <h2>📱 Estructura de la Aplicación</h2>
+        <p>La aplicación está diseñada con una navegación simple e intuitiva:</p>
+
+        <h3>Menú Principal</h3>
+        <ul>
+            <li><strong>Dashboard:</strong> Pantalla principal con estadísticas</li>
+            <li><strong>Empleados:</strong> Listado de empleados (solo lectura)</li>
+            <li><strong>Novedades:</strong> Consulta de novedades (solo lectura)</li>
+        </ul>
+
+        <h3>Navegación por Secciones</h3>
+        <div class="paso">
+            <p><strong>1.</strong> Utiliza el menú superior para moverte entre secciones</p>
+            <p><strong>2.</strong> El nombre de la sección actual se muestra claramente en el encabezado</p>
+            <p><strong>3.</strong> Puedes volver al dashboard en cualquier momento haciendo clic en "Dashboard"</p>
+        </div>
+
+        <h2>🔄 Carga de Datos</h2>
+        <p>Cuando navegues entre secciones:</p>
+        <ul>
+            <li>Los datos se cargan automáticamente</li>
+            <li>Verás un indicador de "Cargando..." mientras se obtiene la información</li>
+            <li>Si hay un error, se mostrará un mensaje explicativo</li>
+        </ul>
+
+        <h2>📊 Información de Estado</h2>
+        <p>En la sección de empleados, la parte inferior muestra:</p>
+        <div class="codigo">
+📋 Total de empleados mostrados: [número]
+</div>
+
+        <div class="alerta-importante">
+            <strong>⚠️ Limitaciones del Rol Encargado:</strong>
+            <ul style="margin-top: 10px;">
+                <li>No verás botones de "Editar" o "Eliminar" en ninguna sección</li>
+                <li>No tendrás acceso a formularios de creación</li>
+                <li>No podrás modificar datos existentes</li>
+                <li>No podrás crear o gestionar novedades</li>
+                <li>Solo podrás consultar información</li>
+            </ul>
+        </div>
+
+        <h2>💡 Consejos de Navegación</h2>
+        <ul>
+            <li><strong>Actualizar datos:</strong> Recarga la página (F5) si necesitas información más reciente</li>
+            <li><strong>Rendimiento:</strong> La aplicación carga datos de forma eficiente, pero con muchos empleados puede tomar unos segundos</li>
+            <li><strong>Responsive:</strong> La aplicación se adapta a diferentes tamaños de pantalla</li>
+        </ul>
+    </div>
+
+    <!-- SOLUCIÓN DE PROBLEMAS -->
+    <div class="page">
+        <h1 id="solucion">7. 🔧 Solución de Problemas</h1>
+
+        <h2>🚨 Problemas Comunes y Soluciones</h2>
+
+        <h3>1. Error de Autenticación</h3>
+        <div class="alerta-importante">
+            <strong>Síntoma:</strong> "No autorizado" o "Token inválido"<br>
+            <strong>Solución:</strong>
+            <ul style="margin-top: 10px;">
+                <li>Cierra la aplicación completamente</li>
+                <li>Vuelve a acceder e inicia sesión nuevamente</li>
+                <li>Si persiste, contacta al administrador</li>
+            </ul>
+        </div>
+
+        <h3>2. Datos No Se Cargan</h3>
+        <div class="alerta">
+            <strong>Síntoma:</strong> "Cargando empleados..." sin finalizar<br>
+            <strong>Solución:</strong>
+            <ul style="margin-top: 10px;">
+                <li>Verifica tu conexión a internet</li>
+                <li>Recarga la página (F5)</li>
+                <li>Cierra y vuelve a abrir el navegador</li>
+            </ul>
+        </div>
+
+        <h3>3. Sesión Expirada</h3>
+        <div class="paso">
+            <strong>Síntoma:</strong> Se muestra pantalla "🔒 Sesión Expirada"<br>
+            <strong>Solución:</strong> Haz clic en "Ir al Login" e inicia sesión nuevamente
+        </div>
+
+        <h3>4. Error de Servidor</strong>
+        <div class="alerta-importante">
+            <strong>Síntoma:</strong> "Error 500" o "Error interno del servidor"<br>
+            <strong>Solución:</strong>
+            <ul style="margin-top: 10px;">
+                <li>Espera unos minutos e intenta nuevamente</li>
+                <li>Si persiste, contacta al administrador del sistema</li>
+            </ul>
+        </div>
+
+        <h2>📞 Pasos Generales de Solución</h2>
+        <div class="paso">
+            <strong>Ante cualquier problema, sigue estos pasos:</strong>
+            <ol>
+                <li>Anota el mensaje de error exacto</li>
+                <li>Recarga la página (F5)</li>
+                <li>Cierra y vuelve a abrir el navegador</li>
+                <li>Intenta iniciar sesión nuevamente</li>
+                <li>Si persiste, contacta soporte técnico</li>
+            </ol>
+        </div>
+
+        <h2>🌐 Requisitos del Navegador</h2>
+        <p>Para el mejor funcionamiento, utiliza:</p>
+        <ul>
+            <li><strong>Chrome:</strong> Versión 90 o superior</li>
+            <li><strong>Firefox:</strong> Versión 88 o superior</li>
+            <li><strong>Safari:</strong> Versión 14 o superior</li>
+            <li><strong>Edge:</strong> Versión 90 o superior</li>
+        </ul>
+
+        <div class="alerta">
+            <strong>💡 Recomendación:</strong> Mantén siempre tu navegador actualizado para evitar problemas de compatibilidad.
+        </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="page">
+        <h1 id="contacto">8. 📞 Contacto y Soporte</h1>
+
+        <h2>🆘 Cuándo Contactar Soporte</h2>
+        <p>Contacta al administrador o soporte técnico cuando:</p>
+        <ul>
+            <li>No puedas acceder al sistema después de varios intentos</li>
+            <li>Los datos no se carguen correctamente</li>
+            <li>Experimentes errores persistentes</li>
+            <li>Necesites cambiar tu contraseña</li>
+            <li>Requieras acceso a funciones adicionales</li>
+        </ul>
+
+        <h2>📋 Información a Proporcionar</h2>
+        <p>Al contactar soporte, incluye:</p>
+        <div class="paso">
+            <ul>
+                <li><strong>Tu nombre de usuario</strong></li>
+                <li><strong>Mensaje de error exacto</strong> (si lo hay)</li>
+                <li><strong>Navegador utilizado</strong> y versión</li>
+                <li><strong>Pasos que realizaste</strong> antes del problema</li>
+                <li><strong>Hora aproximada</strong> del inconveniente</li>
+            </ul>
+        </div>
+
+        <h2>🔄 Actualizaciones del Sistema</h2>
+        <p>Las actualizaciones del sistema son gestionadas por el administrador. Podrás continuar usando la aplicación normalmente durante las actualizaciones menores.</p>
+
+        <div class="alerta">
+            <strong>📢 Mantenimiento Programado:</strong> Se te notificará con anticipación sobre cualquier mantenimiento que pueda afectar el acceso al sistema.
+        </div>
+
+        <h2>📚 Recursos Adicionales</h2>
+        <ul>
+            <li><strong>Este manual:</strong> Guárdalo para consulta rápida</li>
+            <li><strong>Administrador del sistema:</strong> Para cambios de permisos o nuevas funcionalidades</li>
+            <li><strong>Soporte técnico:</strong> Para problemas técnicos específicos</li>
+        </ul>
+
+        <div class="alerta-importante">
+            <strong>⚠️ Seguridad:</strong>
+            <ul style="margin-top: 10px;">
+                <li>Nunca compartas tu usuario y contraseña</li>
+                <li>Cierra sesión al finalizar tu trabajo</li>
+                <li>Reporta cualquier actividad sospechosa</li>
+            </ul>
+        </div>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #667eea;">
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+            <h3 style="color: #667eea; margin-bottom: 15px;">¡Gracias por usar Novedades Tango!</h3>
+            <p style="margin-bottom: 5px;"><strong>Manual de Usuario para Encargados</strong></p>
+            <p style="color: #666; font-size: 14px;">Versión 1.0 - Julio 2025</p>
+        </div>
+    </div>
+
+    <script>
+        // Función para imprimir/generar PDF
+        function generarPDF() {
+            window.print();
+        }
+        
+        // Agregar botón de descarga (opcional)
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!window.location.search.includes('print')) {
+                const botonPDF = document.createElement('button');
+                botonPDF.innerHTML = '📄 Generar PDF';
+                botonPDF.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #667eea;
+                    color: white;
+                    border: none;
+                    padding: 12px 20px;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+                    z-index: 1000;
+                `;
+                botonPDF.onclick = generarPDF;
+                document.body.appendChild(botonPDF);
+            }
+        });
+    </script>
+</body>
+</html>
