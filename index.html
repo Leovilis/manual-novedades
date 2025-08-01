@@ -259,12 +259,12 @@
             <ul>
                 <li><a href="#introduccion">1. Introducción</a></li>
                 <li><a href="#acceso">2. Acceso al Sistema</a></li>
-                <li><a href="#dashboard">3. Panel Principal (Dashboard)</a></li>
-                <li><a href="#empleados">4. Consulta de Empleados</a></li>
-                <li><a href="#novedades">5. Consulta de Novedades</a></li>
-                <li><a href="#navegacion">6. Navegación General</a></li>
-                <li><a href="#solucion">7. Solución de Problemas</a></li>
-                <li><a href="#contacto">8. Contacto y Soporte</a></li>
+                <!--<li><a href="#dashboard">3. Panel Principal (Dashboard)</a></li>-->
+                <li><a href="#empleados">3. Consulta de Empleados</a></li>
+                <li><a href="#novedades">4. Consulta de Novedades</a></li>
+                <li><a href="#navegacion">5. Navegación General</a></li>
+                <li><a href="#solucion">6. Solución de Problemas</a></li>
+                <li><a href="#contacto">7. Contacto y Soporte</a></li>
             </ul>
         </div>        
     </div>
@@ -279,7 +279,7 @@
         <p>Este manual te guiará paso a paso para utilizar eficientemente las funciones basicas de la aplicación, permitiéndote:</p>
         <ul>
             <li>Acceder al sistema de forma segura</li>
-            //<li>Consultar información del dashboard</li>
+            <!--<li>Consultar información del dashboard</li>-->
             <li>Visualizar el listado completo de empleados</li>
             <li>Navegar de manera intuitiva por la aplicación</li>
         </ul>
@@ -288,10 +288,10 @@
         <div class="alerta">
             <strong>📊 Funciones disponibles para Encargados:</strong>
             <ul style="margin-top: 10px;">
-                <li>✅ Ver dashboard con estadísticas generales</li>
-                <li>✅ Consultar listado de empleados (solo lectura)</li>
+                <!--<li>✅ Ver dashboard con estadísticas generales</li>-->
+                <li>✅ Consultar listado de empleados</li>
                 <li>✅ Ver información detallada de empleados</li>
-                <li>✅ Consultar novedades existentes (solo lectura)</li>
+                <li>✅ Consultar novedades existentes</li>
                 <li>✅ Crear novedades nuevas</li>
             </ul>
         </div>
@@ -529,10 +529,9 @@
         <div class="alerta-importante">
             <strong>Restricciones del rol Encargado:</strong>
             <ul style="margin-top: 10px;">
-                <li>❌ No puedes crear nuevas novedades</li>
+                <li>❌ No puedes editar empleados existentes</li>
                 <li>❌ No puedes editar novedades existentes</li>
                 <li>❌ No puedes eliminar novedades</li>
-                <li>❌ No verás botones de "Registrar Novedad" o acciones de edición</li>
             </ul>
         </div>
 
@@ -544,7 +543,7 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
 
         <h2>💡 Consejos de Uso</h2>
         <ul>
-            <li><strong>Observaciones largas:</strong> Si una observación es muy larga, aparecerá truncada. Pasa el cursor sobre ella para ver el texto completo</li>
+            <li><strong>Observaciones largas:</strong> Si una observación es muy larga, aparecerá recortada. Pasa el cursor sobre ella para ver el texto completo</li>
             <li><strong>Orden de datos:</strong> Las novedades se muestran ordenadas por fecha, con las más recientes primero</li>
             <li><strong>Actualización:</strong> Los datos se actualizan automáticamente al acceder a la sección</li>
         </ul>
@@ -559,16 +558,15 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
 
         <h3>Menú Principal</h3>
         <ul>
-            <li><strong>Dashboard:</strong> Pantalla principal con estadísticas</li>
-            <li><strong>Empleados:</strong> Listado de empleados (solo lectura)</li>
-            <li><strong>Novedades:</strong> Consulta de novedades (solo lectura)</li>
+            <!--<li><strong>Dashboard:</strong> Pantalla principal con estadísticas</li>-->
+            <li><strong>Empleados:</strong> Listado de empleados</li>
+            <li><strong>Novedades:</strong> Consulta de novedades</li>
         </ul>
 
         <h3>Navegación por Secciones</h3>
         <div class="paso">
             <p><strong>1.</strong> Utiliza el menú superior para moverte entre secciones</p>
             <p><strong>2.</strong> El nombre de la sección actual se muestra claramente en el encabezado</p>
-            <p><strong>3.</strong> Puedes volver al dashboard en cualquier momento haciendo clic en "Dashboard"</p>
         </div>
 
         <h2>🔄 Carga de Datos</h2>
@@ -588,11 +586,10 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
         <div class="alerta-importante">
             <strong>⚠️ Limitaciones del Rol Encargado:</strong>
             <ul style="margin-top: 10px;">
-                <li>No verás botones de "Editar" o "Eliminar" en ninguna sección</li>
-                <li>No tendrás acceso a formularios de creación</li>
-                <li>No podrás modificar datos existentes</li>
-                <li>No podrás crear o gestionar novedades</li>
-                <li>Solo podrás consultar información</li>
+                <li>No verás botones de "Editar" o "Eliminar" en la sección de Empleados</li>
+                <li>Solo tendrás acceso a formularios de creación de Novedades</li>
+                <li>No podrás modificar datos de empleados existentes</li>
+                <li>Podrás crear novedades pero no gestionar las mismas, en ese caso deberás comunicarte con RRHH</li>
             </ul>
         </div>
 
@@ -600,7 +597,7 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
         <ul>
             <li><strong>Actualizar datos:</strong> Recarga la página (F5) si necesitas información más reciente</li>
             <li><strong>Rendimiento:</strong> La aplicación carga datos de forma eficiente, pero con muchos empleados puede tomar unos segundos</li>
-            <li><strong>Responsive:</strong> La aplicación se adapta a diferentes tamaños de pantalla</li>
+            <li><strong>Responsividad:</strong> La aplicación se adapta a diferentes tamaños de pantalla</li>
         </ul>
     </div>
 
@@ -617,7 +614,7 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
             <ul style="margin-top: 10px;">
                 <li>Cierra la aplicación completamente</li>
                 <li>Vuelve a acceder e inicia sesión nuevamente</li>
-                <li>Si persiste, contacta al administrador</li>
+                <li>Si persiste, contactá a soporte</li>
             </ul>
         </div>
 
@@ -644,7 +641,7 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
             <strong>Solución:</strong>
             <ul style="margin-top: 10px;">
                 <li>Espera unos minutos e intenta nuevamente</li>
-                <li>Si persiste, contacta al administrador del sistema</li>
+                <li>Si persiste, contacta al soporte del sistema</li>
             </ul>
         </div>
 
@@ -656,7 +653,7 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
                 <li>Recarga la página (F5)</li>
                 <li>Cierra y vuelve a abrir el navegador</li>
                 <li>Intenta iniciar sesión nuevamente</li>
-                <li>Si persiste, contacta soporte técnico</li>
+                <li>Si persiste, contacta soporte</li>
             </ol>
         </div>
 
@@ -675,62 +672,80 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
     </div>
 
     <!-- CONTACTO -->
-    <div class="page">
-        <h1 id="contacto">8. 📞 Contacto y Soporte</h1>
-
-        <h2>🆘 Cuándo Contactar Soporte</h2>
-        <p>Contacta al administrador o soporte técnico cuando:</p>
-        <ul>
-            <li>No puedas acceder al sistema después de varios intentos</li>
-            <li>Los datos no se carguen correctamente</li>
-            <li>Experimentes errores persistentes</li>
-            <li>Necesites cambiar tu contraseña</li>
-            <li>Requieras acceso a funciones adicionales</li>
-        </ul>
-
-        <h2>📋 Información a Proporcionar</h2>
-        <p>Al contactar soporte, incluye:</p>
-        <div class="paso">
-            <ul>
-                <li><strong>Tu nombre de usuario</strong></li>
-                <li><strong>Mensaje de error exacto</strong> (si lo hay)</li>
-                <li><strong>Navegador utilizado</strong> y versión</li>
-                <li><strong>Pasos que realizaste</strong> antes del problema</li>
-                <li><strong>Hora aproximada</strong> del inconveniente</li>
-            </ul>
-        </div>
-
-        <h2>🔄 Actualizaciones del Sistema</h2>
-        <p>Las actualizaciones del sistema son gestionadas por el administrador. Podrás continuar usando la aplicación normalmente durante las actualizaciones menores.</p>
-
-        <div class="alerta">
-            <strong>📢 Mantenimiento Programado:</strong> Se te notificará con anticipación sobre cualquier mantenimiento que pueda afectar el acceso al sistema.
-        </div>
-
-        <h2>📚 Recursos Adicionales</h2>
-        <ul>
-            <li><strong>Este manual:</strong> Guárdalo para consulta rápida</li>
-            <li><strong>Administrador del sistema:</strong> Para cambios de permisos o nuevas funcionalidades</li>
-            <li><strong>Soporte técnico:</strong> Para problemas técnicos específicos</li>
-        </ul>
-
-        <div class="alerta-importante">
-            <strong>⚠️ Seguridad:</strong>
-            <ul style="margin-top: 10px;">
-                <li>Nunca compartas tu usuario y contraseña</li>
-                <li>Cierra sesión al finalizar tu trabajo</li>
-                <li>Reporta cualquier actividad sospechosa</li>
-            </ul>
-        </div>
-
-        <hr style="margin: 30px 0; border: none; border-top: 2px solid #667eea;">
-
-        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-            <h3 style="color: #667eea; margin-bottom: 15px;">¡Gracias por usar Novedades Tango!</h3>
-            <p style="margin-bottom: 5px;"><strong>Manual de Usuario para Encargados</strong></p>
-            <p style="color: #666; font-size: 14px;">Versión 1.0 - Julio 2025</p>
-        </div>
+<div class="page">
+    <h1 id="contacto">8. 📞 Contacto y Soporte</h1>
+    
+    <h2>📧 Soporte Técnico</h2>
+    <div class="paso">
+        <p>Para asistencia técnica, contacta al equipo de soporte:</p>
+        <p><strong>Correo electrónico:</strong> <a href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></p>
     </div>
+
+    <h2>🆘 Cuándo Contactar Soporte</h2>
+    <p>Contacta al administrador o soporte técnico cuando:</p>
+    <ul>
+        <li>No puedas acceder al sistema después de varios intentos</li>
+        <li>Los datos no se carguen correctamente</li>
+        <li>Experimentes errores persistentes</li>
+        <li>Necesites cambiar tu contraseña</li>
+        <li>Requieras acceso a funciones adicionales</li>
+    </ul>
+
+    <h2>📋 Información a Proporcionar</h2>
+    <p>Al contactar soporte, incluye:</p>
+    <div class="paso">
+        <ul>
+            <li><strong>Tu nombre de usuario</strong></li>
+            <li><strong>Mensaje de error exacto</strong> (si lo hay)</li>
+            <li><strong>Pasos que realizaste</strong> antes del problema</li>
+            <li><strong>Hora aproximada</strong> del inconveniente</li>
+        </ul>
+    </div>
+
+    <h2>📞 Canales de Contacto</h2>
+    <table class="tabla-funciones">
+        <tr>
+            <td><strong>Soporte Técnico</strong></td>
+            <td>soporte@ddonpedrosrl.com</td>
+        </tr>
+        <tr>
+            <td><strong>Administrador del Sistema</strong></td>
+            <td>Consultar con tu supervisor directo</td>
+        </tr>
+    </table>
+
+    <div class="alerta">
+        <strong>⏱ Tiempos de Respuesta:</strong>
+        <ul style="margin-top: 10px;">
+            <li><strong>Urgencias:</strong> Respuesta en un plazo máximo de 4 horas</li>
+            <li><strong>Consultas generales:</strong> Respuesta en 24 horas hábiles</li>
+        </ul>
+    </div>
+
+    <h2>🔄 Actualizaciones del Sistema</h2>
+    <p>Las actualizaciones del sistema son gestionadas por el administrador. Podrás continuar usando la aplicación normalmente durante las actualizaciones menores.</p>
+
+    <div class="alerta">
+        <strong>📢 Mantenimiento Programado:</strong> Se te notificará con anticipación sobre cualquier mantenimiento que pueda afectar el acceso al sistema.
+    </div>
+
+    <div class="alerta-importante">
+        <strong>⚠️ Seguridad:</strong>
+        <ul style="margin-top: 10px;">
+            <li>Nunca compartas tu usuario y contraseña</li>
+            <li>Cierra sesión al finalizar tu trabajo</li>
+            <li>Reporta cualquier actividad sospechosa a <a href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></li>
+        </ul>
+    </div>
+
+    <hr style="margin: 30px 0; border: none; border-top: 2px solid #667eea;">
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+        <h3 style="color: #667eea; margin-bottom: 15px;">¡Gracias por usar Novedades Tango!</h3>
+        <p style="margin-bottom: 5px;"><strong>Manual de Usuario para Encargados</strong></p>
+        <p style="color: #666; font-size: 14px;">Versión 1.0 - Julio 2025</p>
+    </div>
+</div>
 
     <script>
         // Función para imprimir/generar PDF
