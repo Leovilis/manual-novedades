@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,30 @@
             size: A4;
             margin: 20mm;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
             background: white;
         }
-        
+
         .page {
             min-height: 100vh;
             padding: 20px;
             page-break-after: always;
         }
-        
+
         .page:last-child {
             page-break-after: avoid;
         }
-        
+
         /* Portada */
         .portada {
             display: flex;
@@ -43,7 +44,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
-        
+
         .logo {
             width: 80px;
             height: 80px;
@@ -56,39 +57,39 @@
             font-weight: bold;
             color: #667eea;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-        
+
         .titulo-principal {
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         .subtitulo {
             font-size: 24px;
             margin-bottom: 40px;
             opacity: 0.9;
         }
-        
+
         .info-manual {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 30px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
         }
-        
+
         .info-manual h3 {
             font-size: 20px;
             margin-bottom: 15px;
         }
-        
+
         .info-manual p {
             font-size: 16px;
             margin-bottom: 10px;
         }
-        
+
         /* Contenido general */
         h1 {
             color: #667eea;
@@ -97,29 +98,30 @@
             border-bottom: 3px solid #667eea;
             padding-bottom: 10px;
         }
-        
+
         h2 {
             color: #764ba2;
             font-size: 22px;
             margin: 25px 0 15px 0;
         }
-        
+
         h3 {
             color: #555;
             font-size: 18px;
             margin: 20px 0 10px 0;
         }
-        
-        p, li {
+
+        p,
+        li {
             margin-bottom: 10px;
             text-align: justify;
         }
-        
+
         ul {
             margin-left: 20px;
             margin-bottom: 15px;
         }
-        
+
         .alerta {
             background: #fff3cd;
             border: 1px solid #ffeaa7;
@@ -128,7 +130,7 @@
             margin: 20px 0;
             border-radius: 5px;
         }
-        
+
         .alerta-importante {
             background: #f8d7da;
             border: 1px solid #f5c6cb;
@@ -137,7 +139,7 @@
             margin: 20px 0;
             border-radius: 5px;
         }
-        
+
         .paso {
             background: #e3f2fd;
             border: 1px solid #bbdefb;
@@ -146,7 +148,7 @@
             margin: 15px 0;
             border-radius: 5px;
         }
-        
+
         .codigo {
             background: #f8f9fa;
             border: 1px solid #e9ecef;
@@ -156,7 +158,7 @@
             font-size: 14px;
             margin: 10px 0;
         }
-        
+
         .captura {
             border: 2px solid #ddd;
             border-radius: 8px;
@@ -167,86 +169,86 @@
             font-style: italic;
             color: #666;
         }
-        
+
         .tabla-funciones {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        
+
         .tabla-funciones th,
         .tabla-funciones td {
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
         }
-        
+
         .tabla-funciones th {
             background: #667eea;
             color: white;
             font-weight: bold;
         }
-        
+
         .tabla-funciones tr:nth-child(even) {
             background: #f9f9f9;
         }
-        
+
         .indice {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
         }
-        
+
         .indice h2 {
             margin-top: 0;
             color: #667eea;
         }
-        
+
         .indice ul {
             list-style: none;
             margin-left: 0;
         }
-        
+
         .indice li {
             padding: 8px 0;
             border-bottom: 1px dotted #ddd;
         }
-        
+
         .indice a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
         }
-        
+
         .indice a:hover {
             color: #667eea;
         }
-        
+
         .img-container {
             text-align: center;
             margin: 20px 0;
         }
-        
+
         .img-container img {
             max-width: 100%;
             border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .img-caption {
             font-style: italic;
             color: #666;
             margin-top: 10px;
         }
-        
+
         @media print {
             .page {
                 margin: 0;
                 padding: 15mm;
             }
-            
+
             .portada {
                 margin: -15mm;
                 padding: 15mm;
@@ -254,13 +256,14 @@
         }
     </style>
 </head>
+
 <body>
     <!-- PORTADA -->
     <div class="page portada">
         <div class="logo">NT</div>
         <h1 class="titulo-principal">Novedades Tango</h1>
         <p class="subtitulo">Manual de Usuario para Encargados</p>
-        
+
         <div class="info-manual">
             <h3>📋 Información del Manual</h3>
             <p><strong>Versión:</strong> 1.0</p>
@@ -283,17 +286,19 @@
                 <li><a href="#solucion">6. Solución de Problemas</a></li>
                 <li><a href="#contacto">7. Contacto y Soporte</a></li>
             </ul>
-        </div>        
+        </div>
     </div>
 
     <!-- INTRODUCCIÓN -->
     <div class="page">
         <h1 id="introduccion">1. 🚀 Introducción</h1>
-        
-        <p><strong>Novedades Tango</strong> es una aplicación web diseñada para la gestión integral de empleados y carga novedades laborales.</p>
+
+        <p><strong>Novedades Tango</strong> es una aplicación web diseñada para la gestión integral de empleados y carga
+            novedades laborales.</p>
 
         <h2>🎯 Objetivo del Manual</h2>
-        <p>Este manual te guiará paso a paso para utilizar eficientemente las funciones basicas de la aplicación, permitiéndote:</p>
+        <p>Este manual te guiará paso a paso para utilizar eficientemente las funciones basicas de la aplicación,
+            permitiéndote:</p>
         <ul>
             <li>Acceder al sistema de forma segura</li>
             <li>Visualizar el listado completo de empleados</li>
@@ -315,7 +320,9 @@
         </div>
 
         <h2>🔒 Seguridad y Acceso</h2>
-        <p>El sistema utiliza autenticación por token para garantizar la seguridad. Tu sesión se mantendrá activa mientras uses la aplicación, pero se cerrará automáticamente por seguridad después de un período de inactividad.</p>
+        <p>El sistema utiliza autenticación por token para garantizar la seguridad. Tu sesión se mantendrá activa
+            mientras uses la aplicación, pero se cerrará automáticamente por seguridad después de un período de
+            inactividad.</p>
     </div>
 
     <!-- ACCESO AL SISTEMA -->
@@ -347,7 +354,8 @@
         <div class="alerta-importante">
             <strong>⚠️ Errores Comunes:</strong>
             <ul style="margin-top: 10px;">
-                <li><strong>"Usuario o clave incorrectos":</strong> Verifica que hayas ingresado correctamente tus credenciales</li>
+                <li><strong>"Usuario o clave incorrectos":</strong> Verifica que hayas ingresado correctamente tus
+                    credenciales</li>
                 <li><strong>"No se puede conectar con el servidor":</strong> Contacta al administrador del sistema</li>
                 <li><strong>"Sesión expirada":</strong> Vuelve a iniciar sesión</li>
             </ul>
@@ -357,7 +365,8 @@
         <p>Una vez que ingreses correctamente, serás redirigido automáticamente al menú principal de la aplicación.</p>
 
         <div class="alerta">
-            <strong>💡 Tip:</strong> Si ya tienes una sesión activa, la aplicación te redirigirá automáticamente al menú principal sin necesidad de volver a ingresar credenciales.
+            <strong>💡 Tip:</strong> Si ya tienes una sesión activa, la aplicación te redirigirá automáticamente al menú
+            principal sin necesidad de volver a ingresar credenciales.
         </div>
     </div>
 
@@ -365,7 +374,8 @@
     <div class="page">
         <h1 id="empleados">3. 👥 Consulta de Empleados</h1>
 
-        <p>La sección de empleados te permite visualizar información detallada de todos los empleados registrados en el sistema.</p>
+        <p>La sección de empleados te permite visualizar información detallada de todos los empleados registrados en el
+            sistema.</p>
 
         <h2>🚀 Acceso a la Sección</h2>
         <div class="paso">
@@ -375,7 +385,7 @@
 
         <div class="img-container">
             <img src="./assets/empleados.png" alt="Listado de empleados">
-            <p class="img-caption"style="text-align: center">Vista del listado completo de empleados</p>
+            <p class="img-caption" style="text-align: center">Vista del listado completo de empleados</p>
         </div>
 
         <h2>📋 Información Mostrada</h2>
@@ -448,7 +458,8 @@
     <div class="page">
         <h1 id="novedades">4. 📋 Gestión de Novedades</h1>
 
-        <p>La sección de novedades te permite visualizar todas las novedades laborales registradas en el sistema para los empleados y crear nuevas novedades.</p>
+        <p>La sección de novedades te permite visualizar todas las novedades laborales registradas en el sistema para
+            los empleados y crear nuevas novedades.</p>
 
         <h2>🚀 Acceso a la Sección</h2>
         <div class="paso">
@@ -458,7 +469,7 @@
 
         <div class="img-container">
             <img src="./assets/novedades.png" alt="Listado de novedades">
-            <p class="img-caption"style="text-align: center">Vista del listado de novedades registradas</p>
+            <p class="img-caption" style="text-align: center">Vista del listado de novedades registradas</p>
         </div>
 
         <h2>📊 Información Mostrada</h2>
@@ -508,7 +519,7 @@
 
         <div class="img-container">
             <img src="./assets/nuevaNovedad.png" alt="Formulario de nueva novedad">
-            <p class="img-caption"style="text-align: center">Formulario para registrar una nueva novedad</p>
+            <p class="img-caption" style="text-align: center">Formulario para registrar una nueva novedad</p>
         </div>
 
         <div class="alerta">
@@ -534,15 +545,18 @@
         <h2>📅 Interpretación de Fechas</h2>
         <p>Las fechas se muestran en formato día-mes-año (DD-MM-YYYY) para facilitar su lectura:</p>
         <div class="codigo">
-Ejemplo: 15-07-2025 = 15 de Julio de 2025
+            Ejemplo: 15-07-2025 = 15 de Julio de 2025
         </div>
 
         <h2>💡 Consejos de Uso</h2>
         <ul>
-            <li><strong>Observaciones largas:</strong> Si una observación es muy larga, aparecerá recortada. Pasa el cursor sobre ella para ver el texto completo</li>
-            <li><strong>Orden de datos:</strong> Las novedades se muestran ordenadas por fecha, con las más recientes primero</li>
+            <li><strong>Observaciones largas:</strong> Si una observación es muy larga, aparecerá recortada. Pasa el
+                cursor sobre ella para ver el texto completo</li>
+            <li><strong>Orden de datos:</strong> Las novedades se muestran ordenadas por fecha, con las más recientes
+                primero</li>
             <li><strong>Actualización:</strong> Los datos se actualizan automáticamente al acceder a la sección</li>
-            <li><strong>Creación:</strong> Verifica bien los datos antes de crear una novedad, ya que no podrás modificarla luego</li>
+            <li><strong>Creación:</strong> Verifica bien los datos antes de crear una novedad, ya que no podrás
+                modificarla luego</li>
         </ul>
     </div>
 
@@ -576,7 +590,7 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
         <h2>📊 Información de Estado</h2>
         <p>En la sección de empleados, la parte inferior muestra:</p>
         <div class="codigo">
-📋 Total de empleados mostrados: [número]
+            📋 Total de empleados mostrados: [número]
         </div>
 
         <div class="alerta-importante">
@@ -592,7 +606,8 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
         <h2>💡 Consejos de Navegación</h2>
         <ul>
             <li><strong>Actualizar datos:</strong> Recarga la página (F5) si necesitas información más reciente</li>
-            <li><strong>Rendimiento:</strong> La aplicación carga datos de forma eficiente, pero con muchos empleados puede tomar unos segundos</li>
+            <li><strong>Rendimiento:</strong> La aplicación carga datos de forma eficiente, pero con muchos empleados
+                puede tomar unos segundos</li>
             <li><strong>Responsividad:</strong> La aplicación se adapta a diferentes tamaños de pantalla</li>
         </ul>
     </div>
@@ -663,18 +678,20 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
         </ul>
 
         <div class="alerta">
-            <strong>💡 Recomendación:</strong> Mantén siempre tu navegador actualizado para evitar problemas de compatibilidad.
+            <strong>💡 Recomendación:</strong> Mantén siempre tu navegador actualizado para evitar problemas de
+            compatibilidad.
         </div>
     </div>
 
     <!-- CONTACTO -->
     <div class="page">
         <h1 id="contacto">7. 📞 Contacto y Soporte</h1>
-        
+
         <h2>📧 Soporte Técnico</h2>
         <div class="paso">
             <p>Para asistencia técnica, contacta al equipo de soporte:</p>
-            <p><strong>Correo electrónico:</strong> <a href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></p>
+            <p><strong>Correo electrónico:</strong> <a
+                    href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></p>
             <p><strong>WhatsApp:</strong> <a href="https://wa.me/3884369843">388-4369843</a></p>
         </div>
 
@@ -725,10 +742,12 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
         </div>
 
         <h2>🔄 Actualizaciones del Sistema</h2>
-        <p>Las actualizaciones del sistema son gestionadas por el administrador. Podrás continuar usando la aplicación normalmente durante las actualizaciones menores.</p>
+        <p>Las actualizaciones del sistema son gestionadas por el administrador. Podrás continuar usando la aplicación
+            normalmente durante las actualizaciones menores.</p>
 
         <div class="alerta">
-            <strong>📢 Mantenimiento Programado:</strong> Se te notificará con anticipación sobre cualquier mantenimiento que pueda afectar el acceso al sistema.
+            <strong>📢 Mantenimiento Programado:</strong> Se te notificará con anticipación sobre cualquier
+            mantenimiento que pueda afectar el acceso al sistema.
         </div>
 
         <div class="alerta-importante">
@@ -736,7 +755,8 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
             <ul style="margin-top: 10px;">
                 <li>Nunca compartas tu usuario y contraseña</li>
                 <li>Cierra sesión al finalizar tu trabajo</li>
-                <li>Reporta cualquier actividad sospechosa a <a href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></li>
+                <li>Reporta cualquier actividad sospechosa a <a
+                        href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></li>
             </ul>
         </div>
 
@@ -754,9 +774,9 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
         function generarPDF() {
             window.print();
         }
-        
+
         // Agregar botón de descarga (opcional)
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             if (!window.location.search.includes('print')) {
                 const botonPDF = document.createElement('button');
                 botonPDF.innerHTML = '📄 Generar PDF';
@@ -780,14 +800,15 @@ Ejemplo: 15-07-2025 = 15 de Julio de 2025
         });
     </script>
 </body>
-</html>    botonPDF.onclick = generarPDF;
+<!-- </html>    botonPDF.onclick = generarPDF;
                 document.body.appendChild(botonPDF);
             }
         });
     </script>
 </body>
 <<<<<<< HEAD
-</html>
+</html> -->
 =======
+
 </html>
 >>>>>>> 531a5686b4a2d81613bab515b499c7450d95af6e
