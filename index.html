@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Usuario - Encargados</title>
+    <title>Manual de Usuario - Operadores</title>
     <style>
         @page {
             size: A4;
@@ -90,6 +90,23 @@
             margin-bottom: 10px;
         }
 
+        .url-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .url-box p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .url-box a {
+            color: #fff;
+            text-decoration: none;
+        }
+
         /* Contenido general */
         h1 {
             color: #667eea;
@@ -135,6 +152,15 @@
             background: #f8d7da;
             border: 1px solid #f5c6cb;
             border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .alerta-cambio-clave {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            border-left: 4px solid #0066cc;
             padding: 15px;
             margin: 20px 0;
             border-radius: 5px;
@@ -262,14 +288,19 @@
     <div class="page portada">
         <div class="logo">NT</div>
         <h1 class="titulo-principal">Novedades Tango</h1>
-        <p class="subtitulo">Manual de Usuario para Encargados</p>
+        <p class="subtitulo">Manual de Usuario para Operadores</p>
 
         <div class="info-manual">
             <h3>📋 Información del Manual</h3>
             <p><strong>Versión:</strong> 1.0</p>
-            <p><strong>Dirigido a:</strong> Usuarios con rol de Encargado</p>
-            <p><strong>Fecha:</strong> Julio 2025</p>
-            <p><strong>Funciones principales:</strong> Carga de novedades y consulta de empleados</p>
+            <p><strong>Dirigido a:</strong> Usuarios con rol de Operador</p>
+            <p><strong>Fecha:</strong> Septiembre 2025</p>
+            <p><strong>Funciones principales:</strong> Carga de novedades</p>
+
+            <div class="url-box">
+                <p><strong>🌐 URL del Sistema:</strong></p>
+                <p><a href="http://grupomanzur.ddns.net:3000/" target="_blank">http://grupomanzur.ddns.net:3000/</a></p>
+            </div>
         </div>
     </div>
 
@@ -280,7 +311,7 @@
             <ul>
                 <li><a href="#introduccion">1. Introducción</a></li>
                 <li><a href="#acceso">2. Acceso al Sistema</a></li>
-                <li><a href="#empleados">3. Consulta de Empleados</a></li>
+                <li><a href="#empleados">3. Visualización de Empleados</a></li>
                 <li><a href="#novedades">4. Gestión de Novedades</a></li>
                 <li><a href="#navegacion">5. Navegación General</a></li>
                 <li><a href="#solucion">6. Solución de Problemas</a></li>
@@ -293,45 +324,56 @@
     <div class="page">
         <h1 id="introduccion">1. 🚀 Introducción</h1>
 
-        <p><strong>Novedades Tango</strong> es una aplicación web diseñada para la gestión integral de empleados y carga
-            novedades laborales.</p>
+        <p><strong>Novedades Tango</strong> es una aplicación web diseñada para la gestión de novedades laborales,
+            especialmente optimizada para usuarios operadores que necesitan cargar información de manera rápida y
+            eficiente.</p>
 
         <h2>🎯 Objetivo del Manual</h2>
-        <p>Este manual te guiará paso a paso para utilizar eficientemente las funciones basicas de la aplicación,
-            permitiéndote:</p>
+        <p>Este manual te guiará paso a paso para utilizar eficientemente las funciones de operador, permitiéndote:</p>
         <ul>
             <li>Acceder al sistema de forma segura</li>
-            <li>Visualizar el listado completo de empleados</li>
-            <li>Consultar y registrar novedades</li>
+            <li>Visualizar el listado de empleados como referencia</li>
+            <li>Cargar nuevas novedades laborales</li>
             <li>Navegar de manera intuitiva por la aplicación</li>
         </ul>
 
-        <h2>👤 Perfil de Usuario</h2>
+        <h2>👤 Perfil de Usuario Operador</h2>
         <div class="alerta">
             <strong>📊 Funciones disponibles:</strong>
             <ul style="margin-top: 10px;">
-                <li>✅ Consultar listado de empleados</li>
-                <li>✅ Ver información detallada de empleados</li>
+                <li>✅ Visualizar listado de empleados (solo informativo)</li>
                 <li>✅ Consultar novedades existentes</li>
                 <li>✅ Crear novedades nuevas</li>
+                <li>❌ Modificar datos de empleados</li>
                 <li>❌ Modificar novedades existentes</li>
                 <li>❌ Eliminar novedades</li>
             </ul>
         </div>
 
         <h2>🔒 Seguridad y Acceso</h2>
-        <p>El sistema utiliza autenticación por token para garantizar la seguridad. Tu sesión se mantendrá activa
-            mientras uses la aplicación, pero se cerrará automáticamente por seguridad después de un período de
-            inactividad.</p>
+        <p>El sistema utiliza autenticación por token para garantizar la seguridad. Tu sesión se mantendrá activa por
+            <strong>2 horas</strong> de inactividad, después de este tiempo se cerrará automáticamente y deberás iniciar
+            sesión nuevamente.</p>
+
+        <div class="alerta-importante">
+            <strong>⏰ Tiempo de Sesión:</strong> La sesión se mantiene activa por 2 horas sin actividad. Después de este
+            tiempo, el sistema te desconectará automáticamente por seguridad.
+        </div>
     </div>
 
     <!-- ACCESO AL SISTEMA -->
     <div class="page">
         <h1 id="acceso">2. 🔐 Acceso al Sistema</h1>
 
+        <h2>🌐 URL de Acceso</h2>
+        <p>Para acceder al sistema, dirigete a la siguiente dirección:</p>
+        <div class="codigo">
+            <strong>http://grupomanzur.ddns.net:3000/</strong>
+        </div>
+
         <h2>Paso 1: Pantalla de Login</h2>
         <div class="paso">
-            <p><strong>1.</strong> Accede a la URL de la aplicación proporcionada por tu administrador</p>
+            <p><strong>1.</strong> Accede a la URL del sistema</p>
             <p><strong>2.</strong> Verás una pantalla de inicio de sesión con dos campos:</p>
             <ul>
                 <li><strong>Usuario:</strong> Tu nombre de usuario asignado</li>
@@ -339,12 +381,25 @@
             </ul>
         </div>
 
-        <div class="img-container">
-            <img src="./assets/login.png" alt="Pantalla de inicio de sesión">
-            <p class="img-caption" style="text-align: center">Pantalla de inicio de sesión del sistema</p>
+        <div class="captura">
+           <img src="./assets/login.png" alt="Login">
+            <p class="img-caption">Pantalla de inicio de sesión del sistema</p>
         </div>
 
-        <h2>Paso 2: Ingreso de Credenciales</h2>
+        <h2>Paso 2: Primer Ingreso - Cambio Obligatorio de Clave</h2>
+        <div class="alerta-cambio-clave">
+            <strong>🔑 Cambio de Contraseña Obligatorio</strong>
+            <p>En tu primer inicio de sesión, el sistema te solicitará cambiar tu contraseña por una nueva de tu
+                elección:</p>
+            <ul style="margin-top: 10px;">
+                <li>Ingresa tu <strong>contraseña actual</strong> (proporcionada por el administrador)</li>
+                <li>Crea una <strong>nueva contraseña segura</strong></li>
+                <li>Confirma la nueva contraseña</li>
+                <li>Haz clic en "Cambiar Contraseña"</li>
+            </ul>
+        </div>
+
+        <h2>Paso 3: Ingreso de Credenciales</h2>
         <div class="paso">
             <p><strong>1.</strong> Ingresa tu <strong>usuario</strong> en el primer campo</p>
             <p><strong>2.</strong> Ingresa tu <strong>contraseña</strong> en el segundo campo</p>
@@ -357,25 +412,26 @@
                 <li><strong>"Usuario o clave incorrectos":</strong> Verifica que hayas ingresado correctamente tus
                     credenciales</li>
                 <li><strong>"No se puede conectar con el servidor":</strong> Contacta al administrador del sistema</li>
-                <li><strong>"Sesión expirada":</strong> Vuelve a iniciar sesión</li>
+                <li><strong>"Sesión expirada":</strong> Han pasado más de 2 horas, vuelve a iniciar sesión</li>
             </ul>
         </div>
 
-        <h2>Paso 3: Acceso Exitoso</h2>
+        <h2>Paso 4: Acceso Exitoso</h2>
         <p>Una vez que ingreses correctamente, serás redirigido automáticamente al menú principal de la aplicación.</p>
 
         <div class="alerta">
-            <strong>💡 Tip:</strong> Si ya tienes una sesión activa, la aplicación te redirigirá automáticamente al menú
-            principal sin necesidad de volver a ingresar credenciales.
+            <strong>💡 Tip:</strong> Si ya tienes una sesión activa (menos de 2 horas de inactividad), la aplicación te
+            redirigirá automáticamente al menú principal sin necesidad de volver a ingresar credenciales.
         </div>
     </div>
 
     <!-- EMPLEADOS -->
     <div class="page">
-        <h1 id="empleados">3. 👥 Consulta de Empleados</h1>
+        <h1 id="empleados">3. 👥 Visualización de Empleados</h1>
 
-        <p>La sección de empleados te permite visualizar información detallada de todos los empleados registrados en el
-            sistema.</p>
+        <p>La sección de empleados te permite visualizar información de todos los empleados registrados en el sistema
+            <strong>únicamente con fines informativos</strong>. Esta sección te ayudará a identificar correctamente a
+            los empleados al momento de cargar novedades.</p>
 
         <h2>🚀 Acceso a la Sección</h2>
         <div class="paso">
@@ -383,13 +439,13 @@
             <p><strong>2.</strong> Se cargará automáticamente el listado completo</p>
         </div>
 
-        <div class="img-container">
-            <img src="./assets/empleados.png" alt="Listado de empleados">
-            <p class="img-caption" style="text-align: center">Vista del listado completo de empleados</p>
+        <div class="captura">
+            <img src="./assets/empleados.png" alt="Listado de Empleados">
+            <p class="img-caption">Vista del listado completo de empleados (solo informativo)</p>
         </div>
 
         <h2>📋 Información Mostrada</h2>
-        <p>La tabla de empleados incluye las siguientes columnas:</p>
+        <p>La tabla de empleados incluye las siguientes columnas para tu consulta:</p>
 
         <table class="tabla-funciones">
             <thead>
@@ -400,10 +456,6 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Estado</strong></td>
-                    <td>✅ Activo / ❌ Anulado</td>
-                </tr>
-                <tr>
                     <td><strong>Legajo</strong></td>
                     <td>Número único de identificación del empleado</td>
                 </tr>
@@ -411,14 +463,7 @@
                     <td><strong>Nombre</strong></td>
                     <td>Nombre completo (Apellido, Nombre)</td>
                 </tr>
-                <tr>
-                    <td><strong>CUIL</strong></td>
-                    <td>Número de CUIL del empleado</td>
-                </tr>
-                <tr>
-                    <td><strong>Domicilio</strong></td>
-                    <td>Dirección del empleado</td>
-                </tr>
+
                 <tr>
                     <td><strong>Sucursal</strong></td>
                     <td>Sucursal donde trabaja</td>
@@ -427,29 +472,15 @@
                     <td><strong>Empresa</strong></td>
                     <td>Empresa a la que pertenece</td>
                 </tr>
-                <tr>
-                    <td><strong>Convenio</strong></td>
-                    <td>Tipo de convenio laboral</td>
-                </tr>
-                <tr>
-                    <td><strong>Categoría</strong></td>
-                    <td>Categoría laboral del empleado</td>
-                </tr>
-                <tr>
-                    <td><strong>Tarea</strong></td>
-                    <td>Descripción de la tarea que realiza</td>
-                </tr>
+
             </tbody>
         </table>
 
-        <h2>🎨 Interpretación Visual</h2>
         <div class="alerta">
-            <strong>Códigos de Color:</strong>
+            <strong>💡 Uso Recomendado:</strong>
             <ul style="margin-top: 10px;">
-                <li><strong>Fondo blanco:</strong> Empleados activos</li>
-                <li><strong>Fondo rojo claro:</strong> Empleados anulados/inactivos</li>
-                <li><strong>✅ Verde:</strong> Estado activo</li>
-                <li><strong>❌ Rojo:</strong> Estado anulado</li>
+                <li>Utiliza esta sección para <strong>verificar legajos</strong> antes de cargar novedades</li>
+                <li>Esta información es <strong>solo de consulta</strong>, no podrás modificarla</li>
             </ul>
         </div>
     </div>
@@ -458,8 +489,8 @@
     <div class="page">
         <h1 id="novedades">4. 📋 Gestión de Novedades</h1>
 
-        <p>La sección de novedades te permite visualizar todas las novedades laborales registradas en el sistema para
-            los empleados y crear nuevas novedades.</p>
+        <p>La sección de novedades es tu <strong>función principal</strong> como operador. Aquí podrás visualizar las
+            novedades existentes y crear nuevas novedades laborales para los empleados.</p>
 
         <h2>🚀 Acceso a la Sección</h2>
         <div class="paso">
@@ -467,9 +498,9 @@
             <p><strong>2.</strong> Se cargará automáticamente el listado completo de novedades</p>
         </div>
 
-        <div class="img-container">
-            <img src="./assets/novedades.png" alt="Listado de novedades">
-            <p class="img-caption" style="text-align: center">Vista del listado de novedades registradas</p>
+        <div class="captura">
+            <img src="./assets/novedades.png" alt="Novedades">
+            <p class="img-caption">Vista del listado de novedades registradas</p>
         </div>
 
         <h2>📊 Información Mostrada</h2>
@@ -511,30 +542,38 @@
         </table>
 
         <h2>➕ Creación de Novedades</h2>
+        <p>Esta es tu función principal como operador:</p>
+
         <div class="paso">
-            <p><strong>1.</strong> Haz clic en el botón <strong>"Nueva Novedad"</strong></p>
-            <p><strong>2.</strong> Completa el formulario con los datos requeridos</p>
-            <p><strong>3.</strong> Haz clic en <strong>"Crear Novedad"</strong> para guardar</p>
+            <p><strong>Paso 1:</strong> Haz clic en el botón <strong>"Nueva Novedad"</strong></p>
+            <p><strong>Paso 2:</strong> Completa el formulario con los datos requeridos:</p>
+            <ul>
+                <li><strong>Legajo del empleado:</strong> Número de legajo (verifica en la sección Empleados)</li>
+                <li><strong>Concepto:</strong> Tipo de novedad a registrar</li>
+                <li><strong>Cantidad:</strong> Valor numérico de la novedad</li>
+                <li><strong>Observación:</strong> Comentarios adicionales (opcional)</li>
+            </ul>
+            <p><strong>Paso 3:</strong> Verifica todos los datos y haz clic en <strong>"Crear Novedad"</strong></p>
         </div>
 
-        <div class="img-container">
-            <img src="./assets/nuevaNovedad.png" alt="Formulario de nueva novedad">
-            <p class="img-caption" style="text-align: center">Formulario para registrar una nueva novedad</p>
+        <div class="captura">
+            <img src="./assets/nuevaNovedad.png" alt="Formulario de Novedades">
+            <p class="img-caption">Formulario para registrar una nueva novedad</p>
         </div>
 
         <div class="alerta">
-            <strong>En el rol Encargado puedes:</strong>
+            <strong>Como Operador puedes:</strong>
             <ul style="margin-top: 10px;">
                 <li>✅ Ver todas las novedades registradas</li>
                 <li>✅ Consultar detalles de cada novedad</li>
-                <li>✅ Crear nuevas novedades</li>
+                <li>✅ <strong>Crear nuevas novedades</strong> (tu función principal)</li>
                 <li>✅ Ver información del empleado asociado</li>
                 <li>✅ Leer observaciones y comentarios</li>
             </ul>
         </div>
 
         <div class="alerta-importante">
-            <strong>Restricciones del rol Encargado:</strong>
+            <strong>Restricciones del rol Operador:</strong>
             <ul style="margin-top: 10px;">
                 <li>❌ No puedes editar empleados existentes</li>
                 <li>❌ No puedes editar novedades existentes</li>
@@ -542,21 +581,13 @@
             </ul>
         </div>
 
-        <h2>📅 Interpretación de Fechas</h2>
-        <p>Las fechas se muestran en formato día-mes-año (DD-MM-YYYY) para facilitar su lectura:</p>
-        <div class="codigo">
-            Ejemplo: 15-07-2025 = 15 de Julio de 2025
-        </div>
-
-        <h2>💡 Consejos de Uso</h2>
+        <h2>💡 Consejos para Carga de Novedades</h2>
         <ul>
-            <li><strong>Observaciones largas:</strong> Si una observación es muy larga, aparecerá recortada. Pasa el
-                cursor sobre ella para ver el texto completo</li>
-            <li><strong>Orden de datos:</strong> Las novedades se muestran ordenadas por fecha, con las más recientes
-                primero</li>
-            <li><strong>Actualización:</strong> Los datos se actualizan automáticamente al acceder a la sección</li>
-            <li><strong>Creación:</strong> Verifica bien los datos antes de crear una novedad, ya que no podrás
-                modificarla luego</li>
+            <li><strong>Verificación de legajo:</strong> Siempre verifica que el legajo existe y el empleado esté activo
+            </li>
+            <li><strong>Precisión en datos:</strong> Revisa bien todos los campos antes de crear la novedad</li>
+            <li><strong>Observaciones:</strong> Agrega observaciones claras que ayuden a entender la novedad</li>
+            <li><strong>No se puede modificar:</strong> Una vez creada, no podrás modificar la novedad</li>
         </ul>
     </div>
 
@@ -565,11 +596,12 @@
         <h1 id="navegacion">5. 🧭 Navegación General</h1>
 
         <h2>📱 Estructura de la Aplicación</h2>
-        <p>La aplicación está diseñada con una navegación simple e intuitiva:</p>
+        <p>La aplicación está diseñada con una navegación simple e intuitiva para operadores:</p>
 
         <h3>Menú Principal</h3>
         <ul>
-            <li><strong>Empleados:</strong> Listado de empleados</li>
+            <li><strong>Dasboard:</strong> Panel de inicio con resumen general del sistema</li>
+            <li><strong>Empleados:</strong> Listado informativo de empleados</li>
             <li><strong>Novedades:</strong> Consulta y creación de novedades</li>
         </ul>
 
@@ -593,22 +625,24 @@
             📋 Total de empleados mostrados: [número]
         </div>
 
+        <h2>⏰ Gestión de Tiempo de Sesión</h2>
         <div class="alerta-importante">
-            <strong>⚠️ Limitaciones del Rol Encargado:</strong>
+            <strong>Recordatorio de Sesión:</strong>
             <ul style="margin-top: 10px;">
-                <li>No verás botones de "Editar" o "Eliminar" en la sección de Empleados</li>
-                <li>Solo tendrás acceso a formularios de creación de Novedades</li>
-                <li>No podrás modificar datos de empleados existentes</li>
-                <li>Podrás crear novedades pero no gestionar las mismas, en ese caso deberás comunicarte con RRHH</li>
+                <li>Tu sesión dura <strong>2 horas de inactividad</strong></li>
+                <li>Si te vas a ausentar por mucho tiempo, guarda tu trabajo</li>
+                <li>El sistema te desconectará automáticamente después de 2 horas sin actividad</li>
+                <li>Siempre cierra sesión al terminar tu trabajo</li>
             </ul>
         </div>
 
         <h2>💡 Consejos de Navegación</h2>
         <ul>
             <li><strong>Actualizar datos:</strong> Recarga la página (F5) si necesitas información más reciente</li>
-            <li><strong>Rendimiento:</strong> La aplicación carga datos de forma eficiente, pero con muchos empleados
-                puede tomar unos segundos</li>
+            <li><strong>Rendimiento:</strong> La aplicación carga datos de forma eficiente</li>
             <li><strong>Responsividad:</strong> La aplicación se adapta a diferentes tamaños de pantalla</li>
+            <li><strong>Trabajo eficiente:</strong> Usa la sección Empleados para verificar datos antes de crear
+                novedades</li>
         </ul>
     </div>
 
@@ -624,34 +658,54 @@
             <strong>Solución:</strong>
             <ul style="margin-top: 10px;">
                 <li>Cierra la aplicación completamente</li>
-                <li>Vuelve a acceder e inicia sesión nuevamente</li>
+                <li>Vuelve a acceder a <strong>http://grupomanzur.ddns.net:3000/</strong></li>
+                <li>Inicia sesión nuevamente</li>
                 <li>Si persiste, contactá a soporte</li>
             </ul>
         </div>
 
-        <h3>2. Datos No Se Cargan</h3>
+        <h3>2. Sesión Expirada (Después de 2 horas)</h3>
         <div class="alerta">
+            <strong>Síntoma:</strong> "🔒 Sesión Expirada" o redirección al login<br>
+            <strong>Solución:</strong>
+            <ul style="margin-top: 10px;">
+                <li>Es normal después de 2 horas de inactividad</li>
+                <li>Haz clic en "Ir al Login" e inicia sesión nuevamente</li>
+                <li>Continúa con tu trabajo normalmente</li>
+            </ul>
+        </div>
+
+        <h3>3. Datos No Se Cargan</h3>
+        <div class="paso">
             <strong>Síntoma:</strong> "Cargando empleados..." sin finalizar<br>
             <strong>Solución:</strong>
             <ul style="margin-top: 10px;">
                 <li>Verifica tu conexión a internet</li>
                 <li>Recarga la página (F5)</li>
                 <li>Cierra y vuelve a abrir el navegador</li>
+                <li>Vuelve a acceder a la URL del sistema</li>
             </ul>
         </div>
 
-        <h3>3. Sesión Expirada</h3>
-        <div class="paso">
-            <strong>Síntoma:</strong> Se muestra pantalla "🔒 Sesión Expirada"<br>
-            <strong>Solución:</strong> Haz clic en "Ir al Login" e inicia sesión nuevamente
+        <h3>4. Error al Crear Novedad</h3>
+        <div class="alerta-importante">
+            <strong>Síntoma:</strong> "Error al crear novedad" o formulario no se envía<br>
+            <strong>Solución:</strong>
+            <ul style="margin-top: 10px;">
+                <li>Verifica que el <strong>legajo existe</strong> en la sección Empleados</li>
+                <li>Asegúrate de que el empleado esté <strong>activo</strong> (✅)</li>
+                <li>Completa todos los campos obligatorios</li>
+                <li>Si persiste, contacta a soporte</li>
+            </ul>
         </div>
 
-        <h3>4. Error de Servidor</h3>
+        <h3>5. Error de Servidor</h3>
         <div class="alerta-importante">
             <strong>Síntoma:</strong> "Error 500" o "Error interno del servidor"<br>
             <strong>Solución:</strong>
             <ul style="margin-top: 10px;">
                 <li>Espera unos minutos e intenta nuevamente</li>
+                <li>Recarga la página</li>
                 <li>Si persiste, contacta al soporte del sistema</li>
             </ul>
         </div>
@@ -659,10 +713,11 @@
         <h2>📞 Pasos Generales de Solución</h2>
         <div class="paso">
             <strong>Ante cualquier problema, sigue estos pasos:</strong>
-            <ol style="margin-left: 5px;">
+            <ol style="margin-left: 20px; margin-top: 10px;">
                 <li>Anota el mensaje de error exacto</li>
                 <li>Recarga la página (F5)</li>
                 <li>Cierra y vuelve a abrir el navegador</li>
+                <li>Vuelve a acceder a: <strong>http://grupomanzur.ddns.net:3000/</strong></li>
                 <li>Intenta iniciar sesión nuevamente</li>
                 <li>Si persiste, contacta soporte</li>
             </ol>
@@ -679,8 +734,14 @@
 
         <div class="alerta">
             <strong>💡 Recomendación:</strong> Mantén siempre tu navegador actualizado para evitar problemas de
-            compatibilidad.
+            compatibilidad y guarda en favoritos la URL del sistema.
         </div>
+
+        <h2>🔄 Si Olvidas la URL del Sistema</h2>
+        <div class="codigo">
+            <strong>URL del Sistema:</strong> http://grupomanzur.ddns.net:3000/
+        </div>
+        <p>Guarda esta dirección en tus favoritos para acceso rápido.</p>
     </div>
 
     <!-- CONTACTO -->
@@ -692,7 +753,8 @@
             <p>Para asistencia técnica, contacta al equipo de soporte:</p>
             <p><strong>Correo electrónico:</strong> <a
                     href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/3884369843">388-4369843</a></p>
+            <p><strong>WhatsApp Leo:</strong> <a href="https://wa.me/3884369843">3884369843</a></p>
+            <p><strong>WhatsApp Facu:</strong> <a href="https://wa.me/3884356584">3884356584</a></p>
         </div>
 
         <h2>🆘 Cuándo Contactar Soporte</h2>
@@ -700,9 +762,10 @@
         <ul>
             <li>No puedas acceder al sistema después de varios intentos</li>
             <li>Los datos no se carguen correctamente</li>
-            <li>Experimentes errores persistentes</li>
+            <li>Experimentes errores persistentes al crear novedades</li>
             <li>Necesites cambiar tu contraseña</li>
-            <li>Requieras acceso a funciones adicionales</li>
+            <li>Requieras capacitación adicional</li>
+            <li>Tengas dudas sobre qué datos cargar en las novedades</li>
         </ul>
 
         <h2>📋 Información a Proporcionar</h2>
@@ -714,6 +777,7 @@
                 <li><strong>Pasos que realizaste</strong> antes del problema</li>
                 <li><strong>Hora aproximada</strong> del inconveniente</li>
                 <li><strong>Captura de pantalla</strong> del error (si es posible)</li>
+                <li><strong>Datos de la novedad</strong> que intentabas crear (si aplica)</li>
             </ul>
         </div>
 
@@ -725,11 +789,23 @@
             </tr>
             <tr>
                 <td><strong>WhatsApp</strong></td>
-                <td><a href="https://wa.me/3884369843">388-4369843</a></td>
+                <td>
+                    <a href="https://wa.me/3884369843">
+                        <strong>3884369843 - Leo</strong>
+                    </a><br />
+                    <a href="https://wa.me/3884356584">
+                        <strong>3884356584 - Facu</strong>
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td><strong>Administrador del Sistema</strong></td>
-                <td>Consultar con tu supervisor directo</td>
+                <td>Leo o Facu<br />En caso de ser alguna consulta sobre las cargas, consultar con RRHH Hard</td>
+            </tr>
+            <tr>
+                <td><strong>URL del Sistema</strong></td>
+                <td><a href="http://grupomanzur.ddns.net:3000/" target="_blank">http://grupomanzur.ddns.net:3000/</a>
+                </td>
             </tr>
         </table>
 
@@ -738,25 +814,51 @@
             <ul style="margin-top: 10px;">
                 <li><strong>Urgencias:</strong> Respuesta en un plazo máximo de 4 horas</li>
                 <li><strong>Consultas generales:</strong> Respuesta en 24 horas hábiles</li>
+                <li><strong>Capacitación:</strong> Se coordina según disponibilidad</li>
             </ul>
         </div>
 
-        <h2>🔄 Actualizaciones del Sistema</h2>
-        <p>Las actualizaciones del sistema son gestionadas por el administrador. Podrás continuar usando la aplicación
-            normalmente durante las actualizaciones menores.</p>
+        <h2>🎓 Capacitación y Entrenamiento</h2>
+        <p>Si necesitas capacitación adicional sobre:</p>
+        <ul>
+            <li>Carga de novedades específicas</li>
+            <li>Interpretación de conceptos laborales</li>
+            <li>Uso eficiente del sistema</li>
+            <li>Resolución de casos especiales</li>
+        </ul>
+        <p>Contacta a RRHH Hard para coordinar una sesión de entrenamiento personalizada.</p>
 
+        <h2>📄 Actualizaciones del Sistema</h2>
+        <p>Las actualizaciones del sistema son gestionadas por el area Sistemas. Podrás continuar usando la aplicación
+            normalmente durante las actualizaciones menores.</p>
+<!-- 
         <div class="alerta">
             <strong>📢 Mantenimiento Programado:</strong> Se te notificará con anticipación sobre cualquier
             mantenimiento que pueda afectar el acceso al sistema.
-        </div>
+        </div> -->
 
+        <h2>🔐 Recordatorios de Seguridad</h2>
         <div class="alerta-importante">
             <strong>⚠️ Seguridad:</strong>
             <ul style="margin-top: 10px;">
                 <li>Nunca compartas tu usuario y contraseña</li>
                 <li>Cierra sesión al finalizar tu trabajo</li>
+                <li>No dejes la aplicación abierta en computadoras compartidas</li>
                 <li>Reporta cualquier actividad sospechosa a <a
                         href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></li>
+                <li>Guarda en favoritos la URL oficial del sistema</li>
+            </ul>
+        </div>
+
+        <h2>💡 Consejos para Operadores</h2>
+        <div class="alerta">
+            <strong>Tips para un trabajo eficiente:</strong>
+            <ul style="margin-top: 10px;">
+                <li><strong>Verifica siempre:</strong> Legajo y estado del empleado antes de crear novedades</li>
+                <li><strong>Organiza tu trabajo:</strong> Agrupa las novedades por tipo o empleado</li>
+                <li><strong>Usa observaciones:</strong> Agrega comentarios claros para futuras consultas</li>
+                <li><strong>Mantén actualizada:</strong> La información de empleados consultándola regularmente</li>
+                <li><strong>Contacta soporte:</strong> Ante cualquier duda, es mejor preguntar</li>
             </ul>
         </div>
 
@@ -764,9 +866,14 @@
 
         <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
             <h3 style="color: #667eea; margin-bottom: 15px;">¡Gracias por usar Novedades Tango!</h3>
-            <p style="margin-bottom: 5px;"><strong>Manual de Usuario para Encargados</strong></p>
-            <p style="color: #666; font-size: 14px;">Versión 1.0 - Julio 2025</p>
+            <p style="margin-bottom: 5px;"><strong>Manual de Usuario para Operadores</strong></p>
+            <p style="color: #666; font-size: 14px;">Versión 1.0 - Septiembre 2025</p>
+            <p style="margin-top: 15px;"><strong>🌐 Acceso al Sistema:</strong></p>
+            <p style="color: #667eea; font-weight: bold;"><a href="http://grupomanzur.ddns.net:3000/"
+                    target="_blank">http://grupomanzur.ddns.net:3000/</a></p>
+                    
         </div>
+        <h6 style="text-align: center;">Todos los derechos reservados - Desarrollado por: Leonardo Campos</h6>
     </div>
 
     <script>
@@ -793,13 +900,35 @@
                     font-weight: bold;
                     box-shadow: 0 4px 15px rgba(102,126,234,0.3);
                     z-index: 1000;
+                    font-size: 14px;
                 `;
+                botonPDF.onmouseover = function () {
+                    this.style.background = '#5a67d8';
+                    this.style.transform = 'translateY(-2px)';
+                };
+                botonPDF.onmouseout = function () {
+                    this.style.background = '#667eea';
+                    this.style.transform = 'translateY(0px)';
+                };
                 botonPDF.onclick = generarPDF;
                 document.body.appendChild(botonPDF);
             }
         });
+
+        // Smooth scrolling para los enlaces del índice
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
 </body>
-
 
 </html>
