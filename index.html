@@ -295,8 +295,8 @@
             <p><strong>Versión:</strong> 1.0</p>
             <p><strong>Dirigido a:</strong> Usuarios con rol de Operador</p>
             <p><strong>Fecha:</strong> Septiembre 2025</p>
-            <p><strong>Funciones principales:</strong> Carga de novedades</p>
-            
+            <p><strong>Funciones principales:</strong> Registro de novedades</p>
+
             <div class="url-box">
                 <p><strong>🌐 URL del Sistema:</strong></p>
                 <p><a href="http://grupomanzur.ddns.net:3000/" target="_blank">http://grupomanzur.ddns.net:3000/</a></p>
@@ -313,9 +313,10 @@
                 <li><a href="#acceso">2. Acceso al Sistema</a></li>
                 <li><a href="#empleados">3. Visualización de Empleados</a></li>
                 <li><a href="#novedades">4. Gestión de Novedades</a></li>
-                <li><a href="#navegacion">5. Navegación General</a></li>
-                <li><a href="#solucion">6. Solución de Problemas</a></li>
-                <li><a href="#contacto">7. Contacto y Soporte</a></li>
+                <li><a href="#conceptos">5. Guia de Conceptos y Valores</a></li>
+                <li><a href="#navegacion">6. Navegación General</a></li>
+                <li><a href="#solucion">7. Solución de Problemas</a></li>
+                <li><a href="#contacto">8. Contacto y Soporte</a></li>
             </ul>
         </div>
     </div>
@@ -324,14 +325,16 @@
     <div class="page">
         <h1 id="introduccion">1. 🚀 Introducción</h1>
 
-        <p><strong>Novedades Tango</strong> es una aplicación web diseñada para la gestión de novedades laborales, especialmente optimizada para usuarios operadores que necesitan cargar información de manera rápida y eficiente.</p>
+        <p><strong>Novedades Tango</strong> es una aplicación web diseñada para la gestión de novedades laborales,
+            especialmente optimizada para usuarios operadores que necesitan registrar información de manera rápida y
+            eficiente.</p>
 
         <h2>🎯 Objetivo del Manual</h2>
         <p>Este manual te guiará paso a paso para utilizar eficientemente las funciones de operador, permitiéndote:</p>
         <ul>
             <li>Acceder al sistema de forma segura</li>
             <li>Visualizar el listado de empleados como referencia</li>
-            <li>Cargar nuevas novedades laborales</li>
+            <li>Registrar nuevas novedades laborales</li>
             <li>Navegar de manera intuitiva por la aplicación</li>
         </ul>
 
@@ -341,7 +344,7 @@
             <ul style="margin-top: 10px;">
                 <li>✅ Visualizar listado de empleados (solo informativo)</li>
                 <li>✅ Consultar novedades existentes</li>
-                <li>✅ Crear novedades nuevas</li>
+                <li>✅ Registrar novedades nuevas</li>
                 <li>❌ Modificar datos de empleados</li>
                 <li>❌ Modificar novedades existentes</li>
                 <li>❌ Eliminar novedades</li>
@@ -349,10 +352,11 @@
         </div>
 
         <h2>🔒 Seguridad y Acceso</h2>
-        <p>El sistema utiliza autenticación por token para garantizar la seguridad. Tu sesión se mantendrá activa por <strong>2 horas</strong> de inactividad, después de este tiempo se cerrará automáticamente y deberás iniciar sesión nuevamente.</p>
+        <p>El sistema utiliza autenticación por token para garantizar la seguridad.
 
         <div class="alerta-importante">
-            <strong>⏰ Tiempo de Sesión:</strong> La sesión se mantiene activa por 2 horas sin actividad. Después de este tiempo, el sistema te desconectará automáticamente por seguridad.
+            <strong>⏰ Tiempo de Sesión:</strong> La sesión se mantiene activa por 2 horas sin actividad. Después de este
+            tiempo, el sistema te desconectará automáticamente por seguridad.
         </div>
     </div>
 
@@ -377,14 +381,15 @@
         </div>
 
         <div class="captura">
-            [Aquí se mostraría la captura de pantalla del login]
+            <img src="./assets/login.png" alt="Login">
             <p class="img-caption">Pantalla de inicio de sesión del sistema</p>
         </div>
 
         <h2>Paso 2: Primer Ingreso - Cambio Obligatorio de Clave</h2>
         <div class="alerta-cambio-clave">
             <strong>🔑 Cambio de Contraseña Obligatorio</strong>
-            <p>En tu primer inicio de sesión, el sistema te solicitará cambiar tu contraseña por una nueva de tu elección:</p>
+            <p>En tu primer inicio de sesión, el sistema te solicitará cambiar tu contraseña por una nueva de tu
+                elección:</p>
             <ul style="margin-top: 10px;">
                 <li>Ingresa tu <strong>contraseña actual</strong> (proporcionada por el administrador)</li>
                 <li>Crea una <strong>nueva contraseña segura</strong></li>
@@ -403,7 +408,8 @@
         <div class="alerta-importante">
             <strong>⚠️ Errores Comunes:</strong>
             <ul style="margin-top: 10px;">
-                <li><strong>"Usuario o clave incorrectos":</strong> Verifica que hayas ingresado correctamente tus credenciales</li>
+                <li><strong>"Usuario o clave incorrectos":</strong> Verifica que hayas ingresado correctamente tus
+                    credenciales</li>
                 <li><strong>"No se puede conectar con el servidor":</strong> Contacta al administrador del sistema</li>
                 <li><strong>"Sesión expirada":</strong> Han pasado más de 2 horas, vuelve a iniciar sesión</li>
             </ul>
@@ -411,17 +417,16 @@
 
         <h2>Paso 4: Acceso Exitoso</h2>
         <p>Una vez que ingreses correctamente, serás redirigido automáticamente al menú principal de la aplicación.</p>
-
-        <div class="alerta">
-            <strong>💡 Tip:</strong> Si ya tienes una sesión activa (menos de 2 horas de inactividad), la aplicación te redirigirá automáticamente al menú principal sin necesidad de volver a ingresar credenciales.
-        </div>
     </div>
 
     <!-- EMPLEADOS -->
     <div class="page">
         <h1 id="empleados">3. 👥 Visualización de Empleados</h1>
 
-        <p>La sección de empleados te permite visualizar información de todos los empleados registrados en el sistema <strong>únicamente con fines informativos</strong>. Esta sección te ayudará a identificar correctamente a los empleados al momento de cargar novedades.</p>
+        <p>La sección de empleados te permite visualizar información de todos los empleados registrados en el sistema
+            <strong>únicamente con fines informativos</strong>. Esta sección te ayudará a identificar correctamente a
+            los empleados al momento de registrar novedades.
+        </p>
 
         <h2>🚀 Acceso a la Sección</h2>
         <div class="paso">
@@ -430,7 +435,7 @@
         </div>
 
         <div class="captura">
-            [Aquí se mostraría la captura de pantalla del listado de empleados]
+            <img src="./assets/empleados.png" alt="Listado de Empleados">
             <p class="img-caption">Vista del listado completo de empleados (solo informativo)</p>
         </div>
 
@@ -446,10 +451,6 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Estado</strong></td>
-                    <td>✅ Activo / ❌ Anulado</td>
-                </tr>
-                <tr>
                     <td><strong>Legajo</strong></td>
                     <td>Número único de identificación del empleado</td>
                 </tr>
@@ -457,14 +458,7 @@
                     <td><strong>Nombre</strong></td>
                     <td>Nombre completo (Apellido, Nombre)</td>
                 </tr>
-                <tr>
-                    <td><strong>CUIL</strong></td>
-                    <td>Número de CUIL del empleado</td>
-                </tr>
-                <tr>
-                    <td><strong>Domicilio</strong></td>
-                    <td>Dirección del empleado</td>
-                </tr>
+
                 <tr>
                     <td><strong>Sucursal</strong></td>
                     <td>Sucursal donde trabaja</td>
@@ -473,27 +467,14 @@
                     <td><strong>Empresa</strong></td>
                     <td>Empresa a la que pertenece</td>
                 </tr>
-                <tr>
-                    <td><strong>Convenio</strong></td>
-                    <td>Tipo de convenio laboral</td>
-                </tr>
-                <tr>
-                    <td><strong>Categoría</strong></td>
-                    <td>Categoría laboral del empleado</td>
-                </tr>
-                <tr>
-                    <td><strong>Tarea</strong></td>
-                    <td>Descripción de la tarea que realiza</td>
-                </tr>
+
             </tbody>
         </table>
 
         <div class="alerta">
             <strong>💡 Uso Recomendado:</strong>
             <ul style="margin-top: 10px;">
-                <li>Utiliza esta sección para <strong>verificar legajos</strong> antes de cargar novedades</li>
-                <li>Confirma que el empleado esté <strong>activo</strong> (✅) antes de asignarle novedades</li>
-                <li>Verifica la <strong>sucursal y empresa</strong> correcta del empleado</li>
+                <li>Utiliza esta sección para <strong>verificar legajos</strong> antes de registrar novedades</li>
                 <li>Esta información es <strong>solo de consulta</strong>, no podrás modificarla</li>
             </ul>
         </div>
@@ -503,7 +484,8 @@
     <div class="page">
         <h1 id="novedades">4. 📋 Gestión de Novedades</h1>
 
-        <p>La sección de novedades es tu <strong>función principal</strong> como operador. Aquí podrás visualizar las novedades existentes y crear nuevas novedades laborales para los empleados.</p>
+        <p>La sección de novedades es tu <strong>función principal</strong> como operador. Aquí podrás visualizar las
+            novedades existentes y registrar nuevas novedades laborales para los empleados.</p>
 
         <h2>🚀 Acceso a la Sección</h2>
         <div class="paso">
@@ -512,7 +494,7 @@
         </div>
 
         <div class="captura">
-            [Aquí se mostraría la captura de pantalla del listado de novedades]
+            <img src="./assets/novedades.png" alt="Novedades">
             <p class="img-caption">Vista del listado de novedades registradas</p>
         </div>
 
@@ -529,7 +511,7 @@
             <tbody>
                 <tr>
                     <td><strong>Fecha</strong></td>
-                    <td>Fecha cuando se registró la novedad (DD-MM-YYYY)</td>
+                    <td>Fecha en la que se registra la novedad (DD-MM-YYYY)</td>
                 </tr>
                 <tr>
                     <td><strong>Legajo</strong></td>
@@ -556,7 +538,7 @@
 
         <h2>➕ Creación de Novedades</h2>
         <p>Esta es tu función principal como operador:</p>
-        
+
         <div class="paso">
             <p><strong>Paso 1:</strong> Haz clic en el botón <strong>"Nueva Novedad"</strong></p>
             <p><strong>Paso 2:</strong> Completa el formulario con los datos requeridos:</p>
@@ -566,11 +548,11 @@
                 <li><strong>Cantidad:</strong> Valor numérico de la novedad</li>
                 <li><strong>Observación:</strong> Comentarios adicionales (opcional)</li>
             </ul>
-            <p><strong>Paso 3:</strong> Verifica todos los datos y haz clic en <strong>"Crear Novedad"</strong></p>
+            <p><strong>Paso 3:</strong> Verifica todos los datos y haz clic en <strong>"Registrar Novedad"</strong></p>
         </div>
 
         <div class="captura">
-            [Aquí se mostraría la captura de pantalla del formulario de nueva novedad]
+            <img src="./assets/nuevaNovedad.png" alt="Formulario de Novedades">
             <p class="img-caption">Formulario para registrar una nueva novedad</p>
         </div>
 
@@ -579,7 +561,7 @@
             <ul style="margin-top: 10px;">
                 <li>✅ Ver todas las novedades registradas</li>
                 <li>✅ Consultar detalles de cada novedad</li>
-                <li>✅ <strong>Crear nuevas novedades</strong> (tu función principal)</li>
+                <li>✅ <strong>Registrar novedades</strong> (tu función principal)</li>
                 <li>✅ Ver información del empleado asociado</li>
                 <li>✅ Leer observaciones y comentarios</li>
             </ul>
@@ -591,126 +573,135 @@
                 <li>❌ No puedes editar empleados existentes</li>
                 <li>❌ No puedes editar novedades existentes</li>
                 <li>❌ No puedes eliminar novedades</li>
-                <li>❌ Solo puedes crear nuevas novedades</li>
-            </ul>
-        </div>
-
-        <h2>📚 Guía de Conceptos y Valores</h2>
-        <p>A continuación se detallan los principales conceptos de novedades y cómo cargar cada uno:</p>
-
-        <table class="tabla-funciones">
-            <thead>
-                <tr>
-                    <th>Concepto</th>
-                    <th>Valor a Cargar</th>
-                    <th>Descripción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>CRÉDITO MUTUAL</strong></td>
-                    <td>0</td>
-                    <td>Siempre cargar valor cero</td>
-                </tr>
-                <tr>
-                    <td><strong>CUOTA MUTUAL CAMIONERO</strong></td>
-                    <td>0</td>
-                    <td>Siempre cargar valor cero</td>
-                </tr>
-                <tr>
-                    <td><strong>DESCUENTO PLANILLA FARMACIA</strong></td>
-                    <td>Valor del descuento</td>
-                    <td>Valor del descuento por farmacia previamente auditado según Convenio de Cervecero</td>
-                </tr>
-                <tr>
-                    <td><strong>DÍA DEL GREMIO TRABAJADO</strong></td>
-                    <td>1</td>
-                    <td>Registrar con valor "1" por cada día de gremio trabajado</td>
-                </tr>
-                <tr>
-                    <td><strong>ENFERMEDAD INCULPABLE</strong></td>
-                    <td>Cantidad de días</td>
-                    <td>Días por PM según certificado médico controlado o expedido por auditoría médica</td>
-                </tr>
-                <tr>
-                    <td><strong>ILT P/ART</strong></td>
-                    <td>Cantidad de días</td>
-                    <td>Días por ART. En observaciones especificar si son a cargo de empresa o ART (después de 10 días)</td>
-                </tr>
-                <tr>
-                    <td><strong>INASISTENCIA</strong></td>
-                    <td>Cantidad de días</td>
-                    <td>Faltas con o sin aviso. No registrar faltas autorizadas por Gerencia</td>
-                </tr>
-                <tr>
-                    <td><strong>SUSPENSIONES</strong></td>
-                    <td>Cantidad de días</td>
-                    <td>Días otorgados por RRHH según documento firmado por empleado</td>
-                </tr>
-                <tr>
-                    <td><strong>VACACIONES</strong></td>
-                    <td>Cantidad de días</td>
-                    <td>Días que corresponden según LCT</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3>Licencias Especiales</h3>
-        <p>Para las siguientes licencias, cargar la cantidad de días correspondientes:</p>
-        <ul>
-            <li><strong>LICENCIA POR EXAMEN</strong></li>
-            <li><strong>LIC POR FALLECIMIENTO CÓNYUGE</strong></li>
-            <li><strong>LIC POR FALLECIMIENTO HERMANO/A</strong></li>
-            <li><strong>LIC POR FALLECIMIENTO PADRE/HIJO</strong></li>
-            <li><strong>LIC POR MATERNIDAD</strong></li>
-            <li><strong>LIC POR MATRIMONIO</strong></li>
-            <li><strong>LIC POR NACIMIENTO</strong></li>
-        </ul>
-
-        <h2>⚠️ Reglas Importantes para la Carga</h2>
-        
-        <div class="alerta-importante">
-            <strong>Novedades que abarcan dos meses:</strong>
-            <p>Cuando una novedad abarca dos meses consecutivos, debe cargarse por separado:</p>
-            <ul style="margin-top: 10px;">
-                <li><strong>Ejemplo:</strong> Vacaciones del 22/09/2025 al 05/10/2025</li>
-                <li>Cargar el 10/09/2025: "VACACIONES POR 9 DÍAS"</li>
-                <li>Cargar el 01/10/2025: "VACACIONES POR 5 DÍAS"</li>
-                <li>En observaciones aclarar el período completo</li>
-            </ul>
-        </div>
-
-        <div class="alerta">
-            <strong>Procedimiento de envío:</strong>
-            <ul style="margin-top: 10px;">
-                <li>Las novedades se cargan <strong>diariamente</strong></li>
-                <li>Se envían a RRHH vía mail con documentos respaldatorios</li>
-                <li>Las novedades se procesan el <strong>25 de cada mes</strong></li>
-                <li>Cuando la novedad esté notificada, se registra en el mes correspondiente</li>
             </ul>
         </div>
 
         <h2>💡 Consejos para Carga de Novedades</h2>
         <ul>
-            <li><strong>Verificación de legajo:</strong> Siempre verifica que el legajo existe y el empleado esté activo</li>
-            <li><strong>Precisión en datos:</strong> Revisa bien todos los campos antes de crear la novedad</li>
-            <li><strong>Observaciones detalladas:</strong> Para ART especifica si es a cargo de empresa o ART</li>
-            <li><strong>Períodos completos:</strong> En vacaciones/licencias que abarcan dos meses, aclara el período total</li>
-            <li><strong>Documentación:</strong> Asegúrate de que exista respaldo documental para cada novedad</li>
+            <li><strong>Verificación de legajo:</strong> Siempre verifica que el legajo existe y el empleado esté activo
+            </li>
+            <li><strong>Precisión en datos:</strong> Revisa bien todos los campos antes de registrar la novedad</li>
+            <li><strong>Observaciones:</strong> Agrega observaciones claras que ayuden a entender la novedad</li>
             <li><strong>No se puede modificar:</strong> Una vez creada, no podrás modificar la novedad</li>
         </ul>
     </div>
+    <h2 id="conceptos">5. 📚 Guía de Conceptos y Valores</h2>
+    <p>A continuación se detallan los principales conceptos de novedades y cómo registrar cada uno:</p>
 
+    <table class="tabla-funciones">
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th>Valor a Cargar</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>CRÉDITO MUTUAL</strong></td>
+                <td>0</td>
+                <td>Siempre cargar valor cero</td>
+            </tr>
+            <tr>
+                <td><strong>CUOTA MUTUAL CAMIONERO</strong></td>
+                <td>0</td>
+                <td>Siempre cargar valor cero</td>
+            </tr>
+            <tr>
+                <td><strong>DESCUENTO PLANILLA FARMACIA</strong></td>
+                <td>Valor del descuento</td>
+                <td>Valor del descuento por farmacia previamente auditado según Convenio de Cervecero</td>
+            </tr>
+            <tr>
+                <td><strong>DÍA DEL GREMIO TRABAJADO</strong></td>
+                <td>1</td>
+                <td>Registrar con valor "1" por cada día de gremio trabajado</td>
+            </tr>
+            <tr>
+                <td><strong>ENFERMEDAD INCULPABLE</strong></td>
+                <td>Cantidad de días</td>
+                <td>Días por PM según certificado médico controlado o expedido por auditoría médica</td>
+            </tr>
+            <tr>
+                <td><strong>ILT P/ART</strong></td>
+                <td>Cantidad de días</td>
+                <td>Días por ART. En observaciones especificar si son a cargo de empresa o ART (después de 10 días)</td>
+            </tr>
+            <tr>
+                <td><strong>INASISTENCIA</strong></td>
+                <td>Cantidad de días</td>
+                <td>Faltas con o sin aviso. No registrar faltas autorizadas por Gerencia</td>
+            </tr>
+            <tr>
+                <td><strong>SUSPENSIONES</strong></td>
+                <td>Cantidad de días</td>
+                <td>Días otorgados por RRHH según documento firmado por empleado</td>
+            </tr>
+            <tr>
+                <td><strong>VACACIONES</strong></td>
+                <td>Cantidad de días</td>
+                <td>Días que corresponden según LCT</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Licencias Especiales</h3>
+    <p>Para las siguientes licencias, registrar la cantidad de días correspondientes:</p>
+    <ul>
+        <li><strong>LICENCIA POR EXAMEN</strong></li>
+        <li><strong>LIC POR FALLECIMIENTO CÓNYUGE</strong></li>
+        <li><strong>LIC POR FALLECIMIENTO HERMANO/A</strong></li>
+        <li><strong>LIC POR FALLECIMIENTO PADRE/HIJO</strong></li>
+        <li><strong>LIC POR MATERNIDAD</strong></li>
+        <li><strong>LIC POR MATRIMONIO</strong></li>
+        <li><strong>LIC POR NACIMIENTO</strong></li>
+    </ul>
+
+    <h2>⚠️ Reglas Importantes para el Registro</h2>
+
+    <div class="alerta-importante">
+        <strong>Novedades que abarcan dos meses:</strong>
+        <p>Cuando una novedad abarca dos meses consecutivos, debe registrarse por separado:</p>
+        <ul style="margin-top: 10px;">
+            <li><strong>Ejemplo:</strong> Vacaciones del 22/09/2025 al 05/10/2025</li>
+            <li>Registrar el 10/09/2025: "VACACIONES POR 9 DÍAS"</li>
+            <li>Registrar el 01/10/2025: "VACACIONES POR 5 DÍAS"</li>
+            <li>En observaciones aclarar el período completo</li>
+        </ul>
+    </div>
+
+    <div class="alerta">
+        <strong>Procedimiento de envío:</strong>
+        <ul style="margin-top: 10px;">
+            <li>Las novedades se registran <strong>diariamente</strong></li>
+            <li>Se envían a RRHH vía mail con documentos respaldatorios</li>
+            <li>Las novedades se procesan el <strong>25 de cada mes</strong></li>
+            <li>Cuando la novedad esté notificada, se registra en el mes correspondiente</li>
+        </ul>
+    </div>
+
+    <h2>💡 Consejos para Registro de Novedades</h2>
+    <ul>
+        <li><strong>Verificación de legajo:</strong> Siempre verifica que el legajo existe y el empleado esté activo
+        </li>
+        <li><strong>Precisión en datos:</strong> Revisa bien todos los campos antes de registrar la novedad</li>
+        <li><strong>Observaciones detalladas:</strong> Para ART especifica si es a cargo de empresa o ART</li>
+        <li><strong>Períodos completos:</strong> En vacaciones/licencias que abarcan dos meses, aclara el período total
+        </li>
+        <li><strong>Documentación:</strong> Asegúrate de que exista respaldo documental para cada novedad</li>
+        <li><strong>No se puede modificar:</strong> Una vez registrada, no podrás modificar la novedad</li>
+    </ul>
+    </div>
     <!-- NAVEGACIÓN -->
     <div class="page">
-        <h1 id="navegacion">5. 🧭 Navegación General</h1>
+        <h1 id="navegacion">6. 🧭 Navegación General</h1>
 
         <h2>📱 Estructura de la Aplicación</h2>
         <p>La aplicación está diseñada con una navegación simple e intuitiva para operadores:</p>
 
         <h3>Menú Principal</h3>
         <ul>
-            <li><strong>Dashboard:</strong> Panel de inicio con resumen general del sistema</li>
+            <li><strong>Dasboard:</strong> Panel de inicio con resumen general del sistema</li>
             <li><strong>Empleados:</strong> Listado informativo de empleados</li>
             <li><strong>Novedades:</strong> Consulta y creación de novedades</li>
         </ul>
@@ -751,13 +742,14 @@
             <li><strong>Actualizar datos:</strong> Recarga la página (F5) si necesitas información más reciente</li>
             <li><strong>Rendimiento:</strong> La aplicación carga datos de forma eficiente</li>
             <li><strong>Responsividad:</strong> La aplicación se adapta a diferentes tamaños de pantalla</li>
-            <li><strong>Trabajo eficiente:</strong> Usa la sección Empleados para verificar datos antes de crear novedades</li>
+            <li><strong>Trabajo eficiente:</strong> Usa la sección Empleados para verificar datos antes de registrar
+                novedades</li>
         </ul>
     </div>
 
     <!-- SOLUCIÓN DE PROBLEMAS -->
     <div class="page">
-        <h1 id="solucion">6. 🔧 Solución de Problemas</h1>
+        <h1 id="solucion">7. 🔧 Solución de Problemas</h1>
 
         <h2>🚨 Problemas Comunes y Soluciones</h2>
 
@@ -796,9 +788,9 @@
             </ul>
         </div>
 
-        <h3>4. Error al Crear Novedad</h3>
+        <h3>4. Error al Registrar Novedad</h3>
         <div class="alerta-importante">
-            <strong>Síntoma:</strong> "Error al crear novedad" o formulario no se envía<br>
+            <strong>Síntoma:</strong> "Error al registrar novedad" o formulario no se envía<br>
             <strong>Solución:</strong>
             <ul style="margin-top: 10px;">
                 <li>Verifica que el <strong>legajo existe</strong> en la sección Empleados</li>
@@ -842,7 +834,8 @@
         </ul>
 
         <div class="alerta">
-            <strong>💡 Recomendación:</strong> Mantén siempre tu navegador actualizado para evitar problemas de compatibilidad y guarda en favoritos la URL del sistema.
+            <strong>💡 Recomendación:</strong> Mantén siempre tu navegador actualizado para evitar problemas de
+            compatibilidad y guarda en favoritos la URL del sistema.
         </div>
 
         <h2>🔄 Si Olvidas la URL del Sistema</h2>
@@ -854,13 +847,15 @@
 
     <!-- CONTACTO -->
     <div class="page">
-        <h1 id="contacto">7. 📞 Contacto y Soporte</h1>
+        <h1 id="contacto">8. 📞 Contacto y Soporte</h1>
 
         <h2>📧 Soporte Técnico</h2>
         <div class="paso">
             <p>Para asistencia técnica, contacta al equipo de soporte:</p>
-            <p><strong>Correo electrónico:</strong> <a href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/3884369843">388-4369843</a></p>
+            <p><strong>Correo electrónico:</strong> <a
+                    href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></p>
+            <p><strong>WhatsApp Leo:</strong> <a href="https://wa.me/3884369843">3884369843</a></p>
+            <p><strong>WhatsApp Facu:</strong> <a href="https://wa.me/3884356584">3884356584</a></p>
         </div>
 
         <h2>🆘 Cuándo Contactar Soporte</h2>
@@ -868,7 +863,7 @@
         <ul>
             <li>No puedas acceder al sistema después de varios intentos</li>
             <li>Los datos no se carguen correctamente</li>
-            <li>Experimentes errores persistentes al crear novedades</li>
+            <li>Experimentes errores persistentes al registrar novedades</li>
             <li>Necesites cambiar tu contraseña</li>
             <li>Requieras capacitación adicional</li>
             <li>Tengas dudas sobre qué datos cargar en las novedades</li>
@@ -883,7 +878,7 @@
                 <li><strong>Pasos que realizaste</strong> antes del problema</li>
                 <li><strong>Hora aproximada</strong> del inconveniente</li>
                 <li><strong>Captura de pantalla</strong> del error (si es posible)</li>
-                <li><strong>Datos de la novedad</strong> que intentabas crear (si aplica)</li>
+                <li><strong>Datos de la novedad</strong> que intentabas registrar (si aplica)</li>
             </ul>
         </div>
 
@@ -895,15 +890,23 @@
             </tr>
             <tr>
                 <td><strong>WhatsApp</strong></td>
-                <td><a href="https://wa.me/3884369843">388-4369843</a></td>
+                <td>
+                    <a href="https://wa.me/3884369843">
+                        <strong>3884369843 - Leo</strong>
+                    </a><br />
+                    <a href="https://wa.me/3884356584">
+                        <strong>3884356584 - Facu</strong>
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td><strong>Administrador del Sistema</strong></td>
-                <td>Consultar con tu supervisor directo</td>
+                <td>Leo o Facu<br />En caso de ser alguna consulta sobre las cargas, consultar con RRHH Hard</td>
             </tr>
             <tr>
                 <td><strong>URL del Sistema</strong></td>
-                <td><a href="http://grupomanzur.ddns.net:3000/" target="_blank">http://grupomanzur.ddns.net:3000/</a></td>
+                <td><a href="http://grupomanzur.ddns.net:3000/" target="_blank">http://grupomanzur.ddns.net:3000/</a>
+                </td>
             </tr>
         </table>
 
@@ -924,23 +927,26 @@
             <li>Uso eficiente del sistema</li>
             <li>Resolución de casos especiales</li>
         </ul>
-        <p>Contacta a soporte para coordinar una sesión de entrenamiento personalizada.</p>
+        <p>Contacta a RRHH Hard para coordinar una sesión de entrenamiento personalizada.</p>
 
         <h2>📄 Actualizaciones del Sistema</h2>
-        <p>Las actualizaciones del sistema son gestionadas por el administrador. Podrás continuar usando la aplicación normalmente durante las actualizaciones menores.</p>
-
+        <p>Las actualizaciones del sistema son gestionadas por el area Sistemas. Podrás continuar usando la aplicación
+            normalmente durante las actualizaciones menores.</p>
+        <!-- 
         <div class="alerta">
-            <strong>📢 Mantenimiento Programado:</strong> Se te notificará con anticipación sobre cualquier mantenimiento que pueda afectar el acceso al sistema.
-        </div>
+            <strong>📢 Mantenimiento Programado:</strong> Se te notificará con anticipación sobre cualquier
+            mantenimiento que pueda afectar el acceso al sistema.
+        </div> -->
 
         <h2>🔐 Recordatorios de Seguridad</h2>
         <div class="alerta-importante">
             <strong>⚠️ Seguridad:</strong>
             <ul style="margin-top: 10px;">
                 <li>Nunca compartas tu usuario y contraseña</li>
-                <li>Cierra sesión al finalizar tu trabajo (o déjala expirar después de 2 horas)</li>
+                <li>Cierra sesión al finalizar tu trabajo</li>
                 <li>No dejes la aplicación abierta en computadoras compartidas</li>
-                <li>Reporta cualquier actividad sospechosa a <a href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></li>
+                <li>Reporta cualquier actividad sospechosa a <a
+                        href="mailto:soporte@ddonpedrosrl.com">soporte@ddonpedrosrl.com</a></li>
                 <li>Guarda en favoritos la URL oficial del sistema</li>
             </ul>
         </div>
@@ -949,7 +955,7 @@
         <div class="alerta">
             <strong>Tips para un trabajo eficiente:</strong>
             <ul style="margin-top: 10px;">
-                <li><strong>Verifica siempre:</strong> Legajo y estado del empleado antes de crear novedades</li>
+                <li><strong>Verifica siempre:</strong> Legajo y estado del empleado antes de registrar novedades</li>
                 <li><strong>Organiza tu trabajo:</strong> Agrupa las novedades por tipo o empleado</li>
                 <li><strong>Usa observaciones:</strong> Agrega comentarios claros para futuras consultas</li>
                 <li><strong>Mantén actualizada:</strong> La información de empleados consultándola regularmente</li>
@@ -964,8 +970,11 @@
             <p style="margin-bottom: 5px;"><strong>Manual de Usuario para Operadores</strong></p>
             <p style="color: #666; font-size: 14px;">Versión 1.0 - Septiembre 2025</p>
             <p style="margin-top: 15px;"><strong>🌐 Acceso al Sistema:</strong></p>
-            <p style="color: #667eea; font-weight: bold;"><a href="http://grupomanzur.ddns.net:3000/" target="_blank">http://grupomanzur.ddns.net:3000/</a></p>
+            <p style="color: #667eea; font-weight: bold;"><a href="http://grupomanzur.ddns.net:3000/"
+                    target="_blank">http://grupomanzur.ddns.net:3000/</a></p>
+
         </div>
+        <h6 style="text-align: center;">Todos los derechos reservados - Desarrollado por: Leonardo Campos</h6>
     </div>
 
     <script>
@@ -994,11 +1003,11 @@
                     z-index: 1000;
                     font-size: 14px;
                 `;
-                botonPDF.onmouseover = function() {
+                botonPDF.onmouseover = function () {
                     this.style.background = '#5a67d8';
                     this.style.transform = 'translateY(-2px)';
                 };
-                botonPDF.onmouseout = function() {
+                botonPDF.onmouseout = function () {
                     this.style.background = '#667eea';
                     this.style.transform = 'translateY(0px)';
                 };
